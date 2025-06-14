@@ -1,0 +1,23 @@
+.logo {
+    @include media('md') {
+        order: 1;
+        margin-left: 17.5rem;
+        padding-bottom: 0.8rem;
+    }
+
+    @include media('sm') {
+        order: 0;
+        margin-left: 0;
+    }
+
+    &__link {
+        font-size: 4.2rem;
+    }
+
+    &__img {
+        // Applying gradient to logo
+        background-image: $gradient-logo;
+        background-clip: text;
+        color: transparent;
+    }
+}
