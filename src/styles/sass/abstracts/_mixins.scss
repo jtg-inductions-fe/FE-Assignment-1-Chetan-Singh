@@ -1,0 +1,26 @@
+/*--------------------------*\
+        MEDIA QUERIES
+\*--------------------------*/
+
+@mixin media($breakpoint) {
+    // MOBILE
+    @if $breakpoint == 'sm' {
+        @media (max-width: 700px) {
+            @content;
+        }
+    }
+
+    // TABLET
+    @if $breakpoint == 'md' {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+
+    // DESKTOP
+    @if $breakpoint == 'lg' {
+        @media (min-width: 1440px) {
+            @content;
+        }
+    }
+}

@@ -8,8 +8,12 @@ body {
     font-family: variables.$font-family-primary;
 }
 
-// TODO: CS-A1-01: For testing purposes only. It will be removed later.
-.test {
-    font-size: 8rem;
-    font-weight: variables.$font-weight-lg;
+button,
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style-type: none;
 }
