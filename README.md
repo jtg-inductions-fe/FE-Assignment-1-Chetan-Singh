@@ -14,6 +14,15 @@ We always make our customer happy by providing as many choices as possible.
 -   Schedule your trip
 -   Get discounted coupons
 
+## Technologies Used
+
+-   HTML
+-   SCSS
+-   JavaScript
+-   Icomoon
+-   Prettier
+-   ESLint
+
 ## Getting Started
 
 ### Prerequisites
@@ -78,6 +87,12 @@ To set up the project on your local environment, follow these steps:
     This command will generate the optimized files in the dist directory.
 
 6. **Lint the Code**
+
     ```bash
     npm run lint
+    ```
+
+7. **Format the Code**
+    ```bash
+    npm run prettier
     ```

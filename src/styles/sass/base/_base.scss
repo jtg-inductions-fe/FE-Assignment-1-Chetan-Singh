@@ -3,9 +3,11 @@ html {
 }
 
 body {
-    font-family: Roboto;
+    font-family: $font-family;
 }
 
-h1 {
-    font-size: 9rem;
+// FOR TESTING PURPOSES
+div {
+    font-size: 8rem;
+    font-weight: $font-weight-lg;
 }

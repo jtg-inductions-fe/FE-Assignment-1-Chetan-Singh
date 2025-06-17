@@ -1,7 +1,7 @@
 /*--------------------------*\
         ABSTRACTS
 \*--------------------------*/
-@import 'abstracts/mixins';
+
 @import 'abstracts/variables';
 
 /*--------------------------*\
@@ -9,25 +9,21 @@
 \*--------------------------*/
 
 @import 'base/base';
-@import 'base/reset';
 @import 'base/typography';
 
 /*--------------------------*\
         COMPONENTS
 \*--------------------------*/
 
-@import 'components/buttons';
-@import 'components/cards';
-@import 'components/headings';
-
 /*--------------------------*\
         LAYOUT
 \*--------------------------*/
-
-@import 'layout/grid';
 
 /*--------------------------*\
         PAGES
 \*--------------------------*/
 
-@import 'pages/home';
+/*--------------------------*\
+        THEMES
+\*--------------------------*/
+@import 'themes/iconfonts';
