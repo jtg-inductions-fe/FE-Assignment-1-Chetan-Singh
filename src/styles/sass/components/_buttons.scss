@@ -60,4 +60,30 @@
             transform: scale(1.05);
         }
     }
+
+    &--pink-text {
+        padding: 1.6rem 3.2rem;
+        border-radius: 10rem;
+        color: $color-secondary;
+        @include flex-center;
+        box-shadow: 0 3.4rem 7.5rem #00000012;
+
+        .icon-explore-bag {
+            font-size: 2.4rem;
+            margin-left: 1.6rem;
+        }
+    }
+
+    &--white {
+        outline: 1px solid $color-light;
+        color: $color-dark;
+        border-radius: 10rem;
+        @include flex-center;
+        gap: 1.6rem;
+
+        .icon-play-button {
+            color: $color-primary;
+            font-size: 2rem;
+        }
+    }
 }
