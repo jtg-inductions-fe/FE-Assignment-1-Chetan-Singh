@@ -1,11 +1,14 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
 .logo {
-    @include media('md') {
+    @include mixins.media('md') {
         order: 1;
         margin-left: 17.5rem;
         padding-bottom: 0.8rem;
     }
 
-    @include media('sm') {
+    @include mixins.media('sm') {
         order: 0;
         margin-left: 0;
     }
@@ -16,7 +19,7 @@
 
     &__img {
         // Applying gradient to logo
-        background-image: $gradient-logo;
+        background-image: variables.$gradient-logo;
         background-clip: text;
         color: transparent;
     }
