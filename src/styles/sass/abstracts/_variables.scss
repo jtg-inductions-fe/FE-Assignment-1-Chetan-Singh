@@ -1,0 +1,46 @@
+/*--------------------------*\
+        COLORS
+\*--------------------------*/
+
+$color-primary: #5d50c6;
+$color-secondary: #f85e9f;
+$color-orange: #ff5722;
+$color-yellow-light: #facd4914;
+$color-yellow: #facd49;
+$color-grey: #191825bf;
+$color-dark-2: #0000001a;
+
+/*--------------------------*\
+        SHADOWS
+\*--------------------------*/
+
+$shadow-1: 0 4.1rem 8.9rem 0 $color-dark-2;
+$shadow-2: 0 0.5rem 11rem 0 $color-dark-2;
+
+/*--------------------------*\
+        TYPOGRAPHY
+\*--------------------------*/
+
+$font-family-primary: Roboto, sans-serif;
+
+$font-size-xl: 6.9rem;
+$font-size-3lg: 4.4rem;
+$font-size-2lg: 3.2rem;
+$font-size-lg: 2.8rem;
+$font-size-3md: 2.4rem;
+$font-size-2md: 2.3rem;
+$font-size-md: 1.8rem;
+$font-size-2sm: 1.6rem;
+$font-size-sm: 1.4rem;
+
+$font-weight-lg: 700;
+$font-weight-md: 400;
+
+/*--------------------------*\
+        GRID
+\*--------------------------*/
+$gutter-sm: 1.6rem;
+$gutter: 3.2rem;
+$gutter-y: 1.6rem;
+$gutter-x: 3.2rem;
+$gutter-x-sm: 1.6rem;
