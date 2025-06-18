@@ -1,17 +1,5 @@
-/*--------------------------*\
-        ABSTRACTS
-\*--------------------------*/
+@use './abstracts';
 
-@import 'abstracts/variables';
+@use './base';
 
-/*--------------------------*\
-        BASE
-\*--------------------------*/
-
-@import 'base/base';
-@import 'base/fonts';
-
-/*--------------------------*\
-        VENDORS
-\*--------------------------*/
-@import 'vendors/iconfonts';
+@use './vendors';
