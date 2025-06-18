@@ -6,8 +6,8 @@ body {
     font-family: $font-family;
 }
 
-// FOR TESTING PURPOSES
-div {
+// CS-A1-01: For testing purposes only. It will be removed later.
+.test {
     font-size: 8rem;
     font-weight: $font-weight-lg;
 }
