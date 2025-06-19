@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .btn {
     font-size: variables.$font-size-sm;
@@ -15,9 +16,19 @@
         }
     }
 
+    &--link-primary {
+        color: variables.$color-primary;
+        margin-bottom: 1rem;
+
+        &:hover,
+        &:focus {
+            color: variables.$color-primary-dark;
+        }
+    }
+
     &--text {
         color: variables.$color-dark;
-        transition: transform variables.$duration-sm;
+        transition: color variables.$duration-sm;
         padding: 1.6rem 3.2rem;
         outline: none;
 

@@ -17,28 +17,33 @@
                     ><span class="icon-logo logo__img"></span
                 ></a>
             </div>
-            <nav id="header-nav" class="header__nav">
+            <nav
+                id="header-nav"
+                class="header__nav"
+                aria-label="Main navigation"
+            >
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <a href="#" class="btn btn--link">Home</a>
+                        <a href="#" class="btn--link">Home</a>
                     </li>
                     <li class="header__list-item">
-                        <a href="#discover" class="btn btn--link">Discover</a>
+                        <a href="#discover" class="btn--link">Discover</a>
                     </li>
                     <li class="header__list-item">
-                        <a href="#sp-deals" class="btn btn--link"
-                            >Special Deals</a
-                        >
+                        <a href="#sp-deals" class="btn--link">Special Deals</a>
                     </li>
                     <li class="header__list-item">
-                        <a href="#contact" class="btn btn--link">Contact</a>
+                        <a href="#contact" class="btn--link">Contact</a>
                     </li>
-
-                    <div class="header__cta-sm">
-                        <a href="#login">Log in</a>
-                        <a href="#signup">Sign Up</a>
-                    </div>
                 </ul>
+                <div class="header__cta-sm">
+                    <a class="btn--link btn--link-primary" href="#login"
+                        >Log in</a
+                    >
+                    <a class="btn--link btn--link-primary" href="#signup"
+                        >Sign Up</a
+                    >
+                </div>
             </nav>
             <div class="header__cta">
                 <a href="#login" class="btn btn--text">Log in</a>
@@ -47,8 +52,9 @@
             <button
                 id="header-menu"
                 class="header__menu"
-                role="button"
-                tabindex="2"
+                aria-label="Toggle navigation"
+                aria-controls="header-nav"
+                aria-expanded="false"
             >
                 <span class="icon-menu"></span>
             </button>

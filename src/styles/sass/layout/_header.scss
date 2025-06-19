@@ -2,118 +2,123 @@
 @use '../abstracts/mixins';
 
 .header {
-    margin: 3.2rem 10rem 12rem 15rem;
-    padding: 3.2rem 0 3rem 0;
+    box-sizing: border-box;
+    max-width: 139rem;
+    padding: 3.5rem 1.6rem;
     position: relative;
 
     @include mixins.flex-between;
 
     @include mixins.media('md') {
-        padding: 3.2rem 6.4rem;
+        padding: 3.2rem 6.4rem 3.8rem;
         margin: 0;
     }
 
-    @include mixins.media('sm') {
-        padding: 3.5rem 1.6rem;
+    @include mixins.media('lg') {
+        margin: 0 auto;
+        padding: 6.4rem 7rem 4rem 12.5rem;
     }
 
     &__nav {
-        // CSS to change the position of modal on md-screen
-        @include mixins.media('md') {
-            padding: 2rem 2rem 1.5rem;
-            position: absolute;
-            top: 10rem;
-            left: 6.4rem;
-            right: 60%;
-            z-index: -1;
-            border-radius: 8px;
-            outline: 1px solid variables.$color-grey-light;
+        z-index: 100;
+        position: absolute;
+        top: 12rem;
+        width: 100%;
+        left: 0;
+        padding: 5rem 0;
+        font-size: variables.$font-size-lg;
+        @include mixins.flex-column;
+        justify-content: space-between;
+        height: 77vh;
+        transform-origin: top;
+        transform: scaleY(0);
+        background-color: variables.$color-white;
 
-            transform-origin: top;
-            transform: scaleY(0);
-        }
-
-        // CSS to change the position of modal on sm-screen
-        @include mixins.media('sm') {
-            left: 60%;
-            right: 2rem;
+        @include mixins.media('lg') {
+            top: 0;
+            width: auto;
+            padding: 0;
+            position: relative;
+            display: block;
+            height: auto;
+            font-size: variables.$font-size-sm;
+            transform: scaleY(1);
         }
     }
 
     &__list {
         padding: 0;
         margin: 0;
-        @include mixins.flex-between;
-        font-size: variables.$font-size-sm;
+        @include mixins.flex-column;
+        align-items: center;
 
-        @include mixins.media('md') {
-            display: block;
+        gap: 4rem;
+
+        @include mixins.media('lg') {
+            flex-direction: row;
+            align-items: stretch;
+            gap: 0;
+            @include mixins.flex-between;
         }
     }
 
     &__list-item {
-        text-wrap: nowrap;
+        white-space: nowrap;
 
-        &:not(:last-of-type) {
-            margin-right: 6.5rem;
-        }
-
-        @include mixins.media('md') {
-            margin-right: 0;
-            margin-bottom: 1rem;
+        @include mixins.media('lg') {
+            &:not(:last-of-type) {
+                margin-right: 6.5rem;
+            }
         }
     }
 
     // CTA for sm-screen
     &__cta-sm {
-        display: none;
-        text-wrap: nowrap;
+        @include mixins.flex-column;
+        align-items: center;
+        gap: 2rem;
+        padding-left: 4rem;
 
-        @include mixins.hover-primary;
-
-        @include mixins.media('sm') {
-            display: flex;
-            flex-direction: column;
-            align-items: start;
-        }
-
-        * {
-            color: variables.$color-primary;
-            margin-bottom: 1rem;
-            font-weight: variables.$font-weight-lg;
+        @include mixins.media('lg') {
+            display: none;
         }
     }
 
     // CTA for md and lg screen
     &__cta {
-        display: flex;
-        order: 2;
+        display: none;
 
-        @include mixins.media('sm') {
-            display: none;
+        @include mixins.media('md') {
+            display: flex;
+            order: 2;
+        }
+
+        @include mixins.media('lg') {
+            display: flex;
+            order: 2;
         }
     }
 
     &__menu {
-        display: none;
         background-color: transparent;
         outline: none;
-        line-height: 0;
         font-size: variables.$font-size-xl;
         color: variables.$color-primary;
         padding: 0.4rem;
         border: none;
-        cursor: pointer;
         transition: filter variables.$duration-sm;
 
+        &:hover,
         &:focus {
-            outline: 1px solid variables.$color-orange;
+            @include mixins.hover-primary;
         }
 
         @include mixins.media('md') {
-            display: block;
+            order: 0;
         }
 
-        @include mixins.hover-primary;
+        @include mixins.media('lg') {
+            display: none;
+        }
     }
 }

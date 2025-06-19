@@ -5,21 +5,21 @@
 @mixin media($breakpoint) {
     // MOBILE
     @if $breakpoint == 'sm' {
-        @media (max-width: 700px) {
+        @media (min-width: 300px) and (max-width: 767px) {
             @content;
         }
     }
 
     // TABLET
     @if $breakpoint == 'md' {
-        @media (max-width: 1024px) {
+        @media (min-width: 768px) and (max-width: 1024px) {
             @content;
         }
     }
 
     // DESKTOP
     @if $breakpoint == 'lg' {
-        @media (min-width: 1440px) {
+        @media (min-width: 1025px) {
             @content;
         }
     }
@@ -31,8 +31,11 @@
     align-items: center;
 }
 
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 @mixin hover-primary {
-    &:hover {
-        filter: brightness(0.8);
-    }
+    filter: brightness(0.8);
 }

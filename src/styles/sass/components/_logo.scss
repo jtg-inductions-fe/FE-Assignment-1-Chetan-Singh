@@ -3,14 +3,11 @@
 
 .logo {
     line-height: 0;
+    margin-left: 0;
+
     @include mixins.media('md') {
         order: 1;
         margin-left: 17.5rem;
-    }
-
-    @include mixins.media('sm') {
-        order: 0;
-        margin-left: 0;
     }
 
     &__link {
