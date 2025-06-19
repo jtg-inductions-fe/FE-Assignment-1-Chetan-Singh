@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 .active {
-    animation: popDown 0.2s forwards;
+    animation: popDown variables.$duration-sm forwards;
 }

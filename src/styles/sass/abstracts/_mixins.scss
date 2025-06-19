@@ -24,3 +24,15 @@
         }
     }
 }
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin hover-primary {
+    &:hover {
+        filter: brightness(0.8);
+    }
+}

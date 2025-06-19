@@ -2,11 +2,11 @@
 @use '../abstracts/mixins';
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 3.2rem 10rem 12rem 15rem;
     padding: 3.2rem 0 3rem 0;
+    position: relative;
+
+    @include mixins.flex-between;
 
     @include mixins.media('md') {
         padding: 3.2rem 6.4rem;
@@ -20,6 +20,7 @@
     &__nav {
         // CSS to change the position of modal on md-screen
         @include mixins.media('md') {
+            padding: 2rem 2rem 1.5rem;
             position: absolute;
             top: 10rem;
             left: 6.4rem;
@@ -41,29 +42,34 @@
 
     &__list {
         padding: 0;
-        display: flex;
-        font-size: 1.4rem;
-        width: 42.8rem;
-        justify-content: space-between;
+        margin: 0;
+        @include mixins.flex-between;
+        font-size: variables.$font-size-sm;
 
         @include mixins.media('md') {
-            width: 100%;
             display: block;
-            padding: 0.5rem 2rem;
         }
     }
 
     &__list-item {
-        &:not(:last-child) {
-            @include mixins.media('md') {
-                margin-bottom: 1rem;
-            }
+        text-wrap: nowrap;
+
+        &:not(:last-of-type) {
+            margin-right: 6.5rem;
+        }
+
+        @include mixins.media('md') {
+            margin-right: 0;
+            margin-bottom: 1rem;
         }
     }
 
     // CTA for sm-screen
     &__cta-sm {
         display: none;
+        text-wrap: nowrap;
+
+        @include mixins.hover-primary;
 
         @include mixins.media('sm') {
             display: flex;
@@ -74,7 +80,7 @@
         * {
             color: variables.$color-primary;
             margin-bottom: 1rem;
-            font-weight: 700;
+            font-weight: variables.$font-weight-lg;
         }
     }
 
@@ -90,11 +96,24 @@
 
     &__menu {
         display: none;
+        background-color: transparent;
+        outline: none;
+        line-height: 0;
+        font-size: variables.$font-size-xl;
+        color: variables.$color-primary;
+        padding: 0.4rem;
+        border: none;
+        cursor: pointer;
+        transition: filter variables.$duration-sm;
+
+        &:focus {
+            outline: 1px solid variables.$color-orange;
+        }
 
         @include mixins.media('md') {
             display: block;
-            font-size: 4rem;
-            padding: 0.4rem;
         }
+
+        @include mixins.hover-primary;
     }
 }

@@ -1,12 +1,12 @@
 @use '../abstracts/variables';
 
 .btn {
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: variables.$font-size-sm;
+    font-weight: variables.$font-weight-lg;
 
     &--link {
         color: variables.$color-grey-2;
-        transition: color 0.2s;
+        transition: color variables.$duration-sm;
         outline: none;
 
         &:hover,
@@ -17,7 +17,7 @@
 
     &--text {
         color: variables.$color-dark;
-        transition: transform 0.2s;
+        transition: transform variables.$duration-sm;
         padding: 1.6rem 3.2rem;
         outline: none;
 
@@ -32,7 +32,7 @@
         background-color: variables.$color-primary;
         color: variables.$color-light;
         border-radius: 100px;
-        transition: transform 0.2s;
+        transition: transform variables.$duration-sm;
         outline: none;
 
         &:hover,
