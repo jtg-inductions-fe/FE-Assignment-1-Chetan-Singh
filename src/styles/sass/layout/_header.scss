@@ -142,6 +142,7 @@
         @include mixins.media('md') {
             display: flex;
             order: 2;
+            gap: 1rem;
         }
 
         @include mixins.media('lg') {

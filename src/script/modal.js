@@ -3,7 +3,7 @@ const nav = document.getElementById('header-nav');
 const menuIcon = document.getElementById('icon-menu');
 
 menu.addEventListener('click', () => {
-    let isMenuOpen = menuIcon.classList.contains('icon-close');
+    const isMenuOpen = menuIcon.classList.contains('icon-close');
 
     if (isMenuOpen) {
         nav.classList.add('hidden');
