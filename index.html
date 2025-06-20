@@ -19,66 +19,39 @@
             </div>
             <nav
                 id="header-nav"
-                class="header__nav"
+                class="header__nav hidden"
                 aria-label="Main navigation"
             >
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <a href="#" class="btn--link" aria-label="Home Page"
-                            >Home</a
-                        >
+                        <a href="#" class="btn--link">Home</a>
                     </li>
                     <li class="header__list-item">
-                        <a
-                            href="#discover"
-                            class="btn--link"
-                            aria-label="Discover Page"
-                            >Discover</a
-                        >
+                        <a href="#discover" class="btn--link">Discover</a>
                     </li>
                     <li class="header__list-item">
-                        <a
-                            href="#sp-deals"
-                            class="btn--link"
-                            aria-label="Special Deals Page"
-                            >Special Deals</a
-                        >
+                        <a href="#sp-deals" class="btn--link">Special Deals</a>
                     </li>
                     <li class="header__list-item">
-                        <a
-                            href="#contact"
-                            class="btn--link"
-                            aria-label="Contact Page"
-                            >Contact</a
-                        >
+                        <a href="#contact" class="btn--link">Contact</a>
                     </li>
                 </ul>
                 <ul class="header__cta-sm">
-                    <li>
-                        <a
-                            class="btn--link btn--link-primary"
-                            href="#login"
-                            aria-label="Log In"
+                    <li class="header__cta-sm-link">
+                        <a class="btn--link btn--link-primary" href="#login"
                             >Log in</a
                         >
                     </li>
-                    <li>
-                        <a
-                            class="btn--link btn--link-primary"
-                            href="#signup"
-                            aria-label="Sign Up"
+                    <li class="header__cta-sm-link">
+                        <a class="btn--link btn--link-primary" href="#signup"
                             >Sign Up</a
                         >
                     </li>
                 </ul>
             </nav>
             <div class="header__cta">
-                <a href="#login" class="btn btn--text" aria-label="Log In"
-                    >Log in</a
-                >
-                <a href="#signup" class="btn btn--primary" aria-label="Sign Up"
-                    >Sign Up</a
-                >
+                <a href="#login" class="btn btn--text">Log in</a>
+                <a href="#signup" class="btn btn--primary">Sign Up</a>
             </div>
             <button
                 id="header-menu"
@@ -87,7 +60,7 @@
                 aria-controls="header-nav"
                 aria-expanded="false"
             >
-                <span class="icon-menu"></span>
+                <span id="icon-menu" class="icon-menu"></span>
             </button>
         </header>
         <!-- HEADER SECTION ENDS -->

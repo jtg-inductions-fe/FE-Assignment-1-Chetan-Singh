@@ -8,11 +8,14 @@
     @include mixins.media('md') {
         order: 1;
         margin-left: 17.5rem;
+        padding-top: 0.2rem;
+        padding-right: 0.6rem;
     }
 
     @include mixins.media('lg') {
         order: 0;
         margin-left: 0;
+        padding-top: 0.4rem;
     }
 
     &__link {

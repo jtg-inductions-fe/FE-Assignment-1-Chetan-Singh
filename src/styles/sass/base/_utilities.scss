@@ -3,3 +3,7 @@
 .active {
     animation: popDown variables.$duration-sm forwards;
 }
+
+.hidden {
+    animation: popUp variables.$duration-sm;
+}

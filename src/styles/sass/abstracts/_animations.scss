@@ -1,10 +1,28 @@
 // Animation for modal
 @keyframes popDown {
     0% {
+        opacity: 0;
         transform: scaleY(0);
     }
 
     100% {
+        opacity: 1;
         transform: scaleY(1);
+    }
+}
+
+@keyframes popUp {
+    0% {
+        opacity: 1;
+        transform: scaleY(1);
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scaleY(0);
     }
 }

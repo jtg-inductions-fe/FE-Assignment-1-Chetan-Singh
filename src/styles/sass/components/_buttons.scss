@@ -6,19 +6,27 @@
     font-weight: variables.$font-weight-lg;
 
     &--link {
+        display: inline-block;
         color: variables.$color-grey-2;
         transition: color variables.$duration-sm;
         outline: none;
 
         &:hover,
-        &:focus {
-            color: variables.$color-dark;
+        &:focus,
+        &:active {
+            color: variables.$color-primary-dark;
+            border-bottom: 1px solid variables.$color-primary;
+
+            @include mixins.media('lg') {
+                border-bottom: none;
+            }
         }
     }
 
     &--link-primary {
         color: variables.$color-primary;
         margin-bottom: 1rem;
+        display: inline-block;
 
         &:hover,
         &:focus {
@@ -35,11 +43,13 @@
         &:hover,
         &:focus {
             color: variables.$color-primary;
+            outline: 1px solid variables.$color-primary;
+            border-radius: 100px;
         }
     }
 
     &--primary {
-        padding: 1.8rem 3.4rem;
+        padding: 1.66rem 3.33rem;
         background-color: variables.$color-primary;
         color: variables.$color-light;
         border-radius: 100px;
