@@ -1,0 +1,22 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.heading--main {
+    font-size: variables.$font-size-3lg;
+    font-weight: variables.$font-weight-lg;
+    text-align: center;
+    line-height: 120%;
+    margin-top: 1.6rem;
+    padding: 0 2rem;
+    letter-spacing: 1px;
+}
+
+.text--light {
+    font-size: variables.$font-size-2sm;
+    font-weight: variables.$font-weight-md;
+    text-align: center;
+    line-height: 160%;
+    margin: 0;
+    margin-top: 2.4rem;
+    letter-spacing: 0.5px;
+}

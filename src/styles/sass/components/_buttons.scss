@@ -48,24 +48,29 @@
     }
 
     &--primary {
-        padding: 1.66rem 3.33rem;
+        padding: 2.4rem 3.2rem;
+        border-radius: 100px;
         background-color: variables.$color-primary;
         color: variables.$color-light;
-        border-radius: 100px;
-        transition: transform variables.$duration-sm;
-        outline: none;
+        text-align: center;
+        letter-spacing: 0.5px;
 
-        &:hover,
-        &:focus {
-            transform: scale(1.05);
+        @include mixins.media('lg') {
+            padding: 1.66rem 3.33rem;
+            transition: transform variables.$duration-sm;
+            outline: none;
+            &:hover,
+            &:focus {
+                transform: scale(1.05);
+            }
         }
     }
 
     &--pink-text {
-        padding: 1.6rem 3.2rem;
+        padding: 1.4rem 3.2rem;
         border-radius: 10rem;
-        color: $color-secondary;
-        @include flex-center;
+        color: variables.$color-secondary;
+        @include mixins.flex(center, center);
         box-shadow: 0 3.4rem 7.5rem #00000012;
 
         .icon-explore-bag {
@@ -75,14 +80,17 @@
     }
 
     &--white {
-        outline: 1px solid $color-light;
-        color: $color-dark;
+        padding: 2.7rem 3.2rem 2.4rem;
+        border-radius: 100px;
+        outline: 1px solid variables.$color-light;
+        color: variables.$color-dark;
         border-radius: 10rem;
-        @include flex-center;
-        gap: 1.6rem;
+        @include mixins.flex(center, center);
+        gap: 1.2rem;
+        letter-spacing: 0.5px;
 
         .icon-play-button {
-            color: $color-primary;
+            color: variables.$color-primary;
             font-size: 2rem;
         }
     }
