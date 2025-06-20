@@ -6,7 +6,7 @@
     max-width: 139rem;
     padding: 3.5rem 1.6rem;
     position: relative;
-    @include mixins.flex(space-between, center);
+    @include mixins.flex(space-between, start);
 
     @include mixins.media('md') {
         padding: 3.2rem 6.4rem 3.8rem;
@@ -30,6 +30,7 @@
         transform-origin: top;
         transform: scaleY(0);
         background-color: variables.$color-white;
+        align-self: center;
         @include mixins.flex(space-between, stretch, column);
 
         @include mixins.media('lg') {
@@ -51,7 +52,6 @@
 
         @include mixins.media('lg') {
             @include mixins.flex(space-between, stretch, row, 0);
-            @include mixins.flex-between;
         }
     }
 
@@ -68,6 +68,10 @@
     // CTA for sm-screen
     &__cta-sm {
         @include mixins.flex(flex-start, center, column, 2rem);
+
+        @include mixins.media('md') {
+            display: none;
+        }
 
         @include mixins.media('lg') {
             display: none;

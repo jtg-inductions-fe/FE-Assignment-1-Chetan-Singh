@@ -10,6 +10,11 @@
         margin-left: 17.5rem;
     }
 
+    @include mixins.media('lg') {
+        order: 0;
+        margin-left: 0;
+    }
+
     &__link {
         font-size: variables.$font-size-xl;
     }
