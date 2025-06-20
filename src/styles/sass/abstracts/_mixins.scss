@@ -25,6 +25,21 @@
     }
 }
 
+@mixin flex(
+    $justify-content,
+    $align-items,
+    $direction: row,
+    $gap: 0,
+    $wrap: nowrap
+) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: $wrap;
+    gap: $gap;
+}
+
 @mixin flex-between {
     display: flex;
     justify-content: space-between;

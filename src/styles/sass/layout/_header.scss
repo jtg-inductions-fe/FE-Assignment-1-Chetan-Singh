@@ -6,8 +6,7 @@
     max-width: 139rem;
     padding: 3.5rem 1.6rem;
     position: relative;
-
-    @include mixins.flex-between;
+    @include mixins.flex(space-between, center);
 
     @include mixins.media('md') {
         padding: 3.2rem 6.4rem 3.8rem;
@@ -27,12 +26,11 @@
         left: 0;
         padding: 5rem 0;
         font-size: variables.$font-size-lg;
-        @include mixins.flex-column;
-        justify-content: space-between;
         height: 77vh;
         transform-origin: top;
         transform: scaleY(0);
         background-color: variables.$color-white;
+        @include mixins.flex(space-between, stretch, column);
 
         @include mixins.media('lg') {
             top: 0;
@@ -49,15 +47,10 @@
     &__list {
         padding: 0;
         margin: 0;
-        @include mixins.flex-column;
-        align-items: center;
-
-        gap: 4rem;
+        @include mixins.flex(space-between, center, column, 4rem);
 
         @include mixins.media('lg') {
-            flex-direction: row;
-            align-items: stretch;
-            gap: 0;
+            @include mixins.flex(space-between, stretch, row, 0);
             @include mixins.flex-between;
         }
     }
@@ -74,10 +67,7 @@
 
     // CTA for sm-screen
     &__cta-sm {
-        @include mixins.flex-column;
-        align-items: center;
-        gap: 2rem;
-        padding-left: 4rem;
+        @include mixins.flex(flex-start, center, column, 2rem);
 
         @include mixins.media('lg') {
             display: none;
