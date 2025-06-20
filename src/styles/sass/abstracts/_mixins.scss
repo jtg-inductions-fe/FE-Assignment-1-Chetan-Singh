@@ -1,26 +1,18 @@
 /*--------------------------*\
         MEDIA QUERIES
 \*--------------------------*/
+$breakpoints: (
+    'sm': 300px,
+    'md': 768px,
+    'lg': 1025px,
+);
 
 @mixin media($breakpoint) {
-    // MOBILE
-    @if $breakpoint == 'sm' {
-        @media (min-width: 300px) {
-            @content;
-        }
-    }
-
-    // TABLET
-    @if $breakpoint == 'md' {
-        @media (min-width: 768px) {
-            @content;
-        }
-    }
-
-    // DESKTOP
-    @if $breakpoint == 'lg' {
-        @media (min-width: 1025px) {
-            @content;
+    @each $bp, $size in $breakpoints {
+        @if $breakpoint == $bp {
+            @media (min-width: $size) {
+                @content;
+            }
         }
     }
 }

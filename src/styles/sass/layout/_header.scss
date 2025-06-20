@@ -46,8 +46,6 @@
     }
 
     &__list {
-        padding: 0;
-        margin: 0;
         @include mixins.flex(space-between, center, column, 4rem);
 
         @include mixins.media('lg') {
@@ -67,7 +65,8 @@
 
     // CTA for sm-screen
     &__cta-sm {
-        @include mixins.flex(flex-start, center, column, 2rem);
+        @include mixins.flex(flex-start, center, column, 4rem);
+        padding-bottom: 8rem;
 
         @include mixins.media('md') {
             display: none;
