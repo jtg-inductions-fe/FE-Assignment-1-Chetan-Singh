@@ -4,6 +4,7 @@
 .btn {
     font-size: variables.$font-size-sm;
     font-weight: variables.$font-weight-lg;
+    white-space: nowrap;
 
     &--link {
         display: inline-block;
@@ -43,31 +44,19 @@
         &:focus {
             color: variables.$color-primary;
             outline: 1px solid variables.$color-primary;
-            border-radius: 100px;
+            border-radius: variables.$border-radius-lg;
         }
     }
 
     &--primary {
         padding: 2.4rem 3.2rem;
-        border-radius: 100px;
+        border-radius: variables.$border-radius-lg;
         background-color: variables.$color-primary;
         color: variables.$color-light;
         text-align: center;
-        letter-spacing: 0.5px;
+        letter-spacing: variables.$letter-spacing-sm;
 
         @include mixins.media('md') {
-            padding: 1.66rem 3.33rem;
-            transition: transform variables.$duration-sm;
-            outline: none;
-            letter-spacing: 0;
-
-            &:hover,
-            &:focus {
-                transform: scale(1.05);
-            }
-        }
-
-        @include mixins.media('lg') {
             padding: 1.66rem 3.33rem;
             transition: transform variables.$duration-sm;
             outline: none;
@@ -82,30 +71,40 @@
 
     &--pink-text {
         padding: 1.4rem 3.2rem;
-        border-radius: 10rem;
+        border-radius: variables.$border-radius-lg;
         color: variables.$color-secondary;
         @include mixins.flex(center, center);
-        box-shadow: 0 3.4rem 7.5rem #00000012;
+        box-shadow: variables.$shadow-3;
 
         .icon-explore-bag {
-            font-size: 2.4rem;
+            font-size: variables.$font-size-3md;
             margin-left: 1.6rem;
+        }
+
+        @include mixins.media('lg') {
+            padding: 1.6rem 4rem;
+            gap: 1rem;
         }
     }
 
     &--white {
         padding: 2.7rem 3.2rem 2.4rem;
-        border-radius: 100px;
+        border-radius: variables.$border-radius-lg;
         outline: 1px solid variables.$color-light;
         color: variables.$color-dark;
         border-radius: 10rem;
         @include mixins.flex(center, center);
         gap: 1.2rem;
-        letter-spacing: 0.5px;
+        letter-spacing: variables.$letter-spacing-sm;
 
         .icon-play-button {
             color: variables.$color-primary;
             font-size: 2rem;
+        }
+
+        @include mixins.media('md') {
+            padding: 1.6rem 3.2rem;
+            gap: 1rem;
         }
     }
 }
