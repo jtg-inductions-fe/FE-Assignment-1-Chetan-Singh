@@ -55,10 +55,24 @@
         text-align: center;
         letter-spacing: 0.5px;
 
+        @include mixins.media('md') {
+            padding: 1.66rem 3.33rem;
+            transition: transform variables.$duration-sm;
+            outline: none;
+            letter-spacing: 0;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.05);
+            }
+        }
+
         @include mixins.media('lg') {
             padding: 1.66rem 3.33rem;
             transition: transform variables.$duration-sm;
             outline: none;
+            letter-spacing: 0;
+
             &:hover,
             &:focus {
                 transform: scale(1.05);
