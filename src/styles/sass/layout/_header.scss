@@ -40,7 +40,7 @@
             width: auto;
             padding: 0;
             position: relative;
-            flex-basis: 37%;
+            flex-basis: 36%;
             display: block;
             height: auto;
             font-size: variables.$font-size-sm;
@@ -60,6 +60,7 @@
         white-space: nowrap;
         width: 90%;
         text-align: center;
+        letter-spacing: 0.2px;
 
         .btn--link {
             width: 90%;
@@ -81,7 +82,7 @@
         @include mixins.media('lg') {
             width: auto;
             &:not(:last-of-type) {
-                margin-right: 6.7rem;
+                margin-right: 6.2rem;
             }
         }
     }
@@ -91,7 +92,7 @@
         @include mixins.flex(flex-start, center, column, 2rem);
         padding: 4rem 4rem 0;
 
-        &-link {
+        &-item {
             width: 90%;
             text-align: center;
             font-weight: variables.$font-weight-lg;
@@ -104,9 +105,13 @@
                 color: variables.$color-white;
 
                 &:hover,
-                &:focus,
+                &:focus {
+                    box-shadow: 5px 5px variables.$color-dark;
+                }
+
                 &:active {
-                    background-color: variables.$color-primary;
+                    transform: translate(5px, 5px);
+                    box-shadow: 0 0;
                 }
             }
 
@@ -117,10 +122,13 @@
                 background-color: variables.$color-white;
                 color: variables.$color-primary;
                 &:hover,
-                &:focus,
+                &:focus {
+                    box-shadow: 5px 5px variables.$color-primary-dark;
+                }
+
                 &:active {
-                    background-color: variables.$color-primary;
-                    color: variables.$color-white;
+                    transform: translate(5px, 5px);
+                    box-shadow: 0 0;
                 }
             }
         }
@@ -163,6 +171,11 @@
         border: none;
         transition: filter variables.$duration-sm;
         @include mixins.flex(center, center);
+
+        &:focus {
+            outline: 2px solid black;
+            outline-offset: -0.2rem;
+        }
 
         @include mixins.media('md') {
             order: 0;

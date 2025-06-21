@@ -7,3 +7,13 @@
 .hidden {
     animation: popUp variables.$duration-sm;
 }
+
+@media screen and (prefers-reduced-motion) {
+    .active {
+        animation: popDown 0s forwards;
+    }
+
+    .hidden {
+        animation: popUp 0s;
+    }
+}

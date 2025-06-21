@@ -14,7 +14,7 @@
         &:hover,
         &:focus,
         &:active {
-            color: variables.$color-primary-dark;
+            color: variables.$color-dark;
             border-bottom: 1px solid variables.$color-primary;
 
             @include mixins.media('lg') {

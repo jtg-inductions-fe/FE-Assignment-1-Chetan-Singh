@@ -8,11 +8,9 @@ $breakpoints: (
 );
 
 @mixin media($breakpoint) {
-    @each $bp, $size in $breakpoints {
-        @if $breakpoint == $bp {
-            @media (min-width: $size) {
-                @content;
-            }
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: map-get($breakpoints, $breakpoint)) {
+            @content;
         }
     }
 }
@@ -30,8 +28,4 @@ $breakpoints: (
     align-items: $align-items;
     flex-wrap: $wrap;
     gap: $gap;
-}
-
-@mixin hover-primary {
-    filter: brightness(0.8);
 }
