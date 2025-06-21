@@ -17,15 +17,4 @@
         margin-left: 0;
         padding-top: 0.4rem;
     }
-
-    &__link {
-        font-size: variables.$font-size-xl;
-    }
-
-    &__img {
-        // Applying gradient to logo
-        background-image: variables.$gradient-logo;
-        background-clip: text;
-        color: transparent;
-    }
 }
