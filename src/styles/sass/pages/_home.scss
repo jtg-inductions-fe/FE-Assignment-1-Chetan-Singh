@@ -3,9 +3,43 @@
 
 .hero {
     padding: 2.7rem 1.686rem 0;
+    max-width: 119rem;
+    position: relative;
+
+    @include mixins.media('md') {
+        padding: 6rem 6.2rem;
+        margin: 0 6.4rem;
+    }
+
+    @include mixins.media('lg') {
+        display: grid;
+        grid-template-columns: 36% 1fr;
+        margin: 0 auto;
+    }
+
+    &__graphic {
+        display: none;
+
+        @include mixins.media('md') {
+            display: block;
+            position: absolute;
+            bottom: 0.1rem;
+            left: -25px;
+        }
+
+        @include mixins.media('lg') {
+            position: absolute;
+            bottom: -5.6rem;
+            left: -23px;
+        }
+    }
 
     &__picture {
         width: 100%;
+
+        @include mixins.media('lg') {
+            grid-column: 2 / -1;
+        }
     }
 
     &__img {
@@ -15,11 +49,36 @@
     &__content {
         margin-top: 3.2rem;
         @include mixins.flex(center, center, column);
+
+        @include mixins.media('md') {
+            margin-top: 6rem;
+            gap: 4.2rem;
+        }
+
+        @include mixins.media('lg') {
+            align-self: flex-start;
+            margin-top: 6rem;
+            grid-row: 1 / 2;
+            align-items: flex-start;
+        }
     }
 
     &__cta {
         margin-top: 3.2rem;
         width: 100%;
         @include mixins.flex(center, stretch, column, 2.4rem);
+
+        @include mixins.media('md') {
+            flex-direction: row;
+            margin: 0;
+            gap: 1.6rem;
+        }
+
+        @include mixins.media('lg') {
+            flex-direction: row;
+            justify-content: flex-start;
+            margin: 0;
+            gap: 1.6rem;
+        }
     }
 }
