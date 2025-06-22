@@ -62,6 +62,10 @@
         flex-basis: 47.8%;
     }
 
+    @include mixins.media('md') {
+        flex-basis: 45.98%;
+    }
+
     &__number {
         margin: 0;
         font-size: variables.$font-size-2lgx;
