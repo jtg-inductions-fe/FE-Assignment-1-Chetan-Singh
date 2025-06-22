@@ -4,6 +4,7 @@
 .heading {
     font-weight: variables.$font-weight-lg;
     line-height: variables.$line-height-md;
+    margin: 0;
 
     &--main {
         font-size: variables.$font-size-3lg;
@@ -30,6 +31,17 @@
     &__decoration {
         color: variables.$color-secondary;
     }
+
+    &--sub {
+        font-size: variables.$font-size-2sm;
+        text-transform: uppercase;
+        letter-spacing: variables.$letter-spacing-xl;
+        color: variables.$color-secondary;
+    }
+
+    &--card {
+        font-size: variables.$font-size-3md;
+    }
 }
 
 .text {
@@ -55,5 +67,20 @@
             padding: 0;
             letter-spacing: variables.$letter-spacing-md;
         }
+    }
+
+    &--large {
+        font-size: variables.$font-size-2lg;
+        font-weight: variables.$font-weight-lg;
+        color: variables.$color-dark;
+        line-height: 111%;
+        padding: 0 1.5rem;
+        letter-spacing: 0.5px;
+        margin-top: 2rem;
+    }
+
+    &--card {
+        font-size: variables.$font-size-md;
+        margin: 0;
     }
 }

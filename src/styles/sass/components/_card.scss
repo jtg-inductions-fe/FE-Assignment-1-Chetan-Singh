@@ -1,0 +1,25 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.service-card {
+    padding: 3.2rem;
+    text-align: center;
+    border-radius: variables.$border-radius-sm;
+
+    &:hover {
+        box-shadow: variables.$shadow-1;
+    }
+
+    &__picture {
+        height: 6.4rem;
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    &__content {
+        margin-top: 3.2rem;
+        @include mixins.flex(space-between, stretch, column, 3.2rem);
+    }
+}
