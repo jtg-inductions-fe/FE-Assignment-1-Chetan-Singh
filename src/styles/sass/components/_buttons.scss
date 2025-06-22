@@ -15,7 +15,6 @@
         &:focus,
         &:active {
             color: variables.$color-dark;
-            border-bottom: 1px solid variables.$color-primary;
 
             @include mixins.media('lg') {
                 border-bottom: none;
