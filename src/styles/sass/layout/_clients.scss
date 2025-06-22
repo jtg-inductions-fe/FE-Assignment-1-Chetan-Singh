@@ -6,7 +6,7 @@
 
     @include mixins.media('md') {
         padding: 0;
-        margin: 3.2rem 6.4rem;
+        margin: 3.2rem 6.4rem 0;
     }
 
     @include mixins.media('lg') {

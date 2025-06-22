@@ -1,0 +1,43 @@
+@use '../abstracts/mixins';
+
+.services {
+    margin: 6.4rem 1.6rem 0;
+    max-width: 119.7rem;
+
+    @include mixins.media('md') {
+        margin: 0 6.4rem;
+        padding: 6.5rem 0;
+    }
+
+    @include mixins.media('lg') {
+        margin: 0 auto;
+        padding: 5.4rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1.92fr;
+        align-items: center;
+    }
+
+    &__content {
+        text-align: center;
+
+        @include mixins.media('lg') {
+            text-align: left;
+            padding-top: 1rem;
+        }
+    }
+
+    &__cards {
+        margin-top: 3.2rem;
+        @include mixins.flex(flex-start, stretch, column, 1.6rem);
+
+        @include mixins.media('md') {
+            margin-top: 6.4rem;
+            flex-direction: row;
+        }
+
+        @include mixins.media('lg') {
+            margin-top: 0;
+            gap: 2.1rem;
+        }
+    }
+}
