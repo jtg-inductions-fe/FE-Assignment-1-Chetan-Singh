@@ -87,6 +87,7 @@
 
     &--light-2 {
         margin-top: 3.2rem;
+        padding: 0;
     }
 
     &--large {
@@ -96,6 +97,7 @@
         line-height: 111%;
         padding-left: 1rem;
         letter-spacing: variables.$letter-spacing-sm;
+        // letter-spacing: 0.7px;
         margin-top: 2rem;
         text-align: center;
 

@@ -3,6 +3,12 @@
 .travel-point {
     margin: 6.8rem 1.6rem 0;
 
+    @include mixins.media('md') {
+        margin: 0 6.4rem;
+        padding: 7.4rem 0 0;
+        padding-left: 3.2rem;
+    }
+
     &__picture {
         width: 100%;
     }
@@ -13,10 +19,20 @@
 
     &__content {
         margin-top: 3.75rem;
+
+        @include mixins.media('md') {
+            margin: 6.4rem 0;
+            margin-right: 3.2rem;
+        }
     }
 
     &__cards {
         margin-top: 3.2rem;
-        @include mixins.flex(center, stretch, row, 1.6rem, wrap);
+        @include mixins.flex(flex-start, stretch, row, 1.6rem, wrap);
+
+        @include mixins.media('md') {
+            margin-top: 6.4rem;
+            gap: 3.2rem;
+        }
     }
 }
