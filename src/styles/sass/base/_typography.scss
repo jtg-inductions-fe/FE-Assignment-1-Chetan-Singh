@@ -37,6 +37,7 @@
         text-transform: uppercase;
         letter-spacing: variables.$letter-spacing-xl;
         color: variables.$color-secondary;
+        text-align: center;
 
         @include mixins.media('md') {
             font-size: variables.$font-size-2md;
@@ -44,6 +45,7 @@
         }
 
         @include mixins.media('lg') {
+            text-align: left;
             padding-left: 1rem;
         }
     }
@@ -83,6 +85,10 @@
         }
     }
 
+    &--light-2 {
+        margin-top: 3.2rem;
+    }
+
     &--large {
         font-size: variables.$font-size-2lg;
         font-weight: variables.$font-weight-lg;
@@ -91,6 +97,7 @@
         padding-left: 1rem;
         letter-spacing: variables.$letter-spacing-sm;
         margin-top: 2rem;
+        text-align: center;
 
         @include mixins.media('md') {
             font-size: variables.$font-size-3lg;
@@ -100,6 +107,7 @@
             font-size: variables.$font-size-2xl;
             letter-spacing: variables.$letter-spacing-md;
             line-height: variables.$line-height-md;
+            text-align: left;
         }
     }
 
