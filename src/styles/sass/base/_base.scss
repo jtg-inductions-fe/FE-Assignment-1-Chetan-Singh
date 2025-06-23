@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 html {
     font-size: 62.5%;
@@ -11,6 +12,10 @@ h1 {
 
 body {
     font-family: variables.$font-family-primary;
+
+    @include mixins.media('lg') {
+        overflow: visible !important;
+    }
 }
 
 button,

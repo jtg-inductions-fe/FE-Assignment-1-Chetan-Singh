@@ -11,6 +11,8 @@ function handleMenuOpen() {
 
     menuIcon.classList.add('icon-close');
     menuIcon.classList.remove('icon-menu');
+
+    document.body.style.overflow = 'hidden';
 }
 
 /**
@@ -22,6 +24,8 @@ function handleMenuClose() {
 
     menuIcon.classList.add('icon-menu');
     menuIcon.classList.remove('icon-close');
+
+    document.body.style.overflow = 'visible';
 }
 
 /**
