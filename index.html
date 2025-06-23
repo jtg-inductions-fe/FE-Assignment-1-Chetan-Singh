@@ -4,10 +4,75 @@
         <title>Travlog - Travel top destinations of the world</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Chetan Singh" />
+        <meta
+            name="description"
+            content="Travlog is a website for travellers and explorers all over the world."
+        />
+        <meta name="robots" content="nofollow" />
         <link rel="icon" type="image/x-icon" href="assets/logo.ico" />
+
+        <!-- SCRIPTS -->
+        <script type="module" src="./src/script/index.js" defer></script>
     </head>
     <body>
-        <div class="test">Travlog <span class="icon-envelope"></span></div>
-        <script type="module" src="./src/script/index.js"></script>
+        <!-- HEADER SECTION STARTS -->
+        <header class="header">
+            <div class="logo">
+                <a href="#" class="logo__link" aria-label="Home">
+                    <img src="/assets/logo.svg" alt="Travlog logo" />
+                </a>
+            </div>
+            <nav
+                id="header-nav"
+                class="header__nav hidden"
+                aria-label="Main navigation"
+            >
+                <ul class="header__list">
+                    <li class="header__list-item">
+                        <a href="#" class="btn btn--link">Home</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#discover" class="btn btn--link">Discover</a>
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#sp-deals" class="btn btn--link"
+                            >Special Deals</a
+                        >
+                    </li>
+                    <li class="header__list-item">
+                        <a href="#contact" class="btn btn--link">Contact</a>
+                    </li>
+                </ul>
+                <ul class="header__cta-sm">
+                    <li class="header__cta-sm-item">
+                        <a class="btn btn--link btn--link-primary" href="#login"
+                            >Log in</a
+                        >
+                    </li>
+                    <li class="header__cta-sm-item">
+                        <a
+                            class="btn btn--link btn--link-primary"
+                            href="#signup"
+                            >Sign Up</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+            <nav class="header__cta">
+                <a href="#login" class="btn btn--text">Log in</a>
+                <a href="#signup" class="btn btn--primary">Sign Up</a>
+            </nav>
+            <button
+                id="header-menu"
+                class="header__menu"
+                aria-label="Toggle navigation"
+                aria-controls="header-nav"
+                aria-expanded="false"
+            >
+                <span id="icon-menu" class="icon-menu"></span>
+            </button>
+        </header>
+        <!-- HEADER SECTION ENDS -->
     </body>
 </html>

@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+.active {
+    animation: popDown variables.$duration-sm forwards;
+}
+
+.hidden {
+    animation: popUp variables.$duration-sm;
+}
+
+@media screen and (prefers-reduced-motion) {
+    .active {
+        animation: popDown 0s forwards;
+    }
+
+    .hidden {
+        animation: popUp 0s;
+    }
+}

@@ -1,0 +1,196 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.header {
+    box-sizing: border-box;
+    max-width: 139rem;
+    padding: 3.5rem 1.6rem;
+    position: relative;
+    @include mixins.flex(space-between, start);
+
+    @include mixins.media('md') {
+        padding: 3.2rem 6.4rem 3.8rem;
+        margin: 0;
+    }
+
+    @include mixins.media('lg') {
+        margin: 0 auto;
+        padding: 6.4rem 7rem 4rem 12.5rem;
+    }
+
+    &__nav {
+        overflow-y: auto;
+        z-index: 100;
+        position: absolute;
+        top: 12rem;
+        width: 100%;
+        left: 0;
+        padding: 1rem 0 4rem;
+        font-size: variables.$font-size-md;
+        height: 76.2vh;
+        transform-origin: top;
+        transform: scaleY(0);
+        background-color: variables.$color-white;
+        align-self: center;
+        @include mixins.flex(space-between, stretch, column);
+
+        @include mixins.media('lg') {
+            overflow: visible;
+            top: 0;
+            width: auto;
+            padding: 0;
+            position: relative;
+            flex-basis: 36%;
+            display: block;
+            height: auto;
+            font-size: variables.$font-size-sm;
+            transform: scaleY(1);
+        }
+    }
+
+    &__list {
+        @include mixins.flex(space-between, center, column, 0);
+
+        @include mixins.media('lg') {
+            @include mixins.flex(flex-start, stretch, row, 0);
+        }
+    }
+
+    &__list-item {
+        white-space: nowrap;
+        width: 90%;
+        text-align: center;
+        letter-spacing: 0.2px;
+
+        .btn--link {
+            width: 90%;
+            padding: 2.8rem 0;
+            border-bottom: 1px solid variables.$color-grey-2;
+
+            @include mixins.media('md') {
+                width: 80%;
+                padding: 4rem 0;
+            }
+
+            @include mixins.media('lg') {
+                padding: 0;
+                border: none;
+                text-align: start;
+            }
+        }
+
+        @include mixins.media('lg') {
+            width: auto;
+            &:not(:last-of-type) {
+                margin-right: 6.2rem;
+            }
+        }
+    }
+
+    // CTA for sm-screen
+    &__cta-sm {
+        @include mixins.flex(flex-start, center, column, 2rem);
+        padding: 4rem 4rem 0;
+
+        &-item {
+            width: 90%;
+            text-align: center;
+            font-weight: variables.$font-weight-lg;
+
+            .btn--link-primary {
+                width: 100%;
+                padding: 2rem 0;
+                border-bottom: 1px solid variables.$color-grey-2;
+                background-color: variables.$color-primary-dark;
+                color: variables.$color-white;
+
+                &:hover,
+                &:focus {
+                    box-shadow: 5px 5px variables.$color-dark;
+                }
+
+                &:active {
+                    transform: translate(5px, 5px);
+                    box-shadow: 0 0;
+                }
+            }
+
+            .btn--link-primary[href='#login'] {
+                width: 100%;
+                padding: 2rem 0;
+                border: 1px solid variables.$color-primary;
+                background-color: variables.$color-white;
+                color: variables.$color-primary;
+                &:hover,
+                &:focus {
+                    box-shadow: 5px 5px variables.$color-primary-dark;
+                }
+
+                &:active {
+                    transform: translate(5px, 5px);
+                    box-shadow: 0 0;
+                }
+            }
+        }
+
+        @include mixins.media('md') {
+            display: none;
+        }
+
+        @include mixins.media('lg') {
+            width: auto;
+            display: none;
+        }
+    }
+
+    // CTA for md and lg screen
+    &__cta {
+        display: none;
+
+        @include mixins.media('md') {
+            display: flex;
+            order: 2;
+            gap: 1rem;
+        }
+
+        @include mixins.media('lg') {
+            padding-top: 0.2rem;
+            padding-right: 0.3rem;
+            display: flex;
+            order: 2;
+        }
+    }
+
+    &__menu {
+        line-height: 0;
+        background-color: transparent;
+        outline: none;
+        font-size: variables.$font-size-xl;
+        color: variables.$color-primary;
+        padding: 0.4rem;
+        border: none;
+        transition: filter variables.$duration-sm;
+        @include mixins.flex(center, center);
+
+        &:focus {
+            outline: 2px solid black;
+            outline-offset: -0.2rem;
+        }
+
+        @include mixins.media('md') {
+            order: 0;
+        }
+
+        @include mixins.media('lg') {
+            display: none;
+        }
+
+        .icon-close {
+            background-color: variables.$color-primary;
+            color: variables.$color-white;
+            font-size: variables.$font-size-2lg;
+            border-radius: 12px;
+            padding: 0.5rem;
+        }
+    }
+}

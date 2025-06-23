@@ -1,14 +1,21 @@
 /*--------------------------*\
         COLORS
 \*--------------------------*/
+$color-white: #fff;
+
+$color-light: #eee;
+$color-dark: #222831;
 
 $color-primary: #5d50c6;
+$color-primary-dark: #3c1e9e;
 $color-secondary: #f85e9f;
 $color-orange: #ff5722;
 $color-yellow-light: #facd4914;
 $color-yellow: #facd49;
+$color-grey-light: #e5e5e5;
 $color-grey: #191825bf;
 $color-dark-2: #0000001a;
+$color-grey-2: #19182580;
 
 /*--------------------------*\
         SHADOWS
@@ -23,8 +30,10 @@ $shadow-2: 0 0.5rem 11rem 0 $color-dark-2;
 
 $font-family-primary: Roboto, sans-serif;
 
-$font-size-xl: 6.9rem;
-$font-size-3lg: 4.4rem;
+$font-size-3xl: 6.9rem;
+$font-size-2xl: 4.4rem;
+$font-size-xl: 4.2rem;
+$font-size-3lg: 3.7rem;
 $font-size-2lg: 3.2rem;
 $font-size-lg: 2.8rem;
 $font-size-3md: 2.4rem;
@@ -44,3 +53,8 @@ $gutter: 3.2rem;
 $gutter-y: 1.6rem;
 $gutter-x: 3.2rem;
 $gutter-x-sm: 1.6rem;
+
+/*--------------------------*\
+        TRANSITIONS
+\*--------------------------*/
+$duration-sm: 0.2s;
