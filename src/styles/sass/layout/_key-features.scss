@@ -1,0 +1,54 @@
+@use '../abstracts/mixins';
+
+.key-features {
+    &__main {
+        margin: 9.3rem 4rem 0;
+    }
+
+    &__picture {
+        width: 100%;
+
+        @include mixins.media('md') {
+            width: auto;
+            padding: 2.7rem 12.15rem;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        margin: 10.7rem 0.8rem 0;
+
+        @include mixins.media('md') {
+            margin: 3.6rem 5.2rem;
+        }
+    }
+
+    &__text {
+        .text--large {
+            margin-top: 1.9rem;
+            letter-spacing: 0;
+        }
+
+        .text--light-2 {
+            margin-top: 3.4rem;
+
+            @include mixins.media('md') {
+                margin-top: 3.2rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+
+    &__cards {
+        margin-top: 3.2rem;
+        @include mixins.flex(flex-start, stretch, column, 0.8rem);
+
+        @include mixins.media('md') {
+            margin-top: 7rem;
+            gap: 0;
+        }
+    }
+}

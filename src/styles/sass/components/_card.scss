@@ -69,3 +69,60 @@
         font-size: 1.8rem;
     }
 }
+
+.key-features-card {
+    padding: 3.4rem;
+    border-radius: variables.$border-radius-sm;
+
+    @include mixins.media('md') {
+        @include mixins.flex(flex-start, center, row, 3.2rem);
+        padding: 3.2rem;
+        padding-left: 3.6rem;
+    }
+
+    &:hover {
+        outline: 1px solid variables.$color-grey-4;
+    }
+
+    &__img {
+        box-sizing: border-box;
+        width: 10rem;
+        height: 10rem;
+        padding: 3rem;
+        border-radius: variables.$border-radius-sm;
+        font-size: variables.$font-size-3lg;
+        color: variables.$color-white;
+        background-color: variables.$color-orange;
+
+        &--2 {
+            background-color: variables.$color-yellow;
+        }
+
+        &--3 {
+            background-color: variables.$color-secondary;
+        }
+    }
+
+    &__content {
+        margin-top: 3.4rem;
+        @include mixins.flex(flex-start, stretch, column, 0.8rem);
+
+        @include mixins.media('md') {
+            margin-top: 0;
+        }
+
+        .heading--card,
+        .text--card {
+            text-align: left;
+        }
+
+        .heading--card {
+            font-size: variables.$font-size-2md;
+            letter-spacing: 0;
+        }
+
+        .text--card {
+            line-height: variables.$line-height-2md;
+        }
+    }
+}
