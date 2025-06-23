@@ -73,11 +73,15 @@
 .key-features-card {
     padding: 3.4rem;
     border-radius: variables.$border-radius-sm;
+    transition: outline 0.1s;
 
     @include mixins.media('md') {
         @include mixins.flex(flex-start, center, row, 3.2rem);
-        padding: 3.2rem;
-        padding-left: 3.6rem;
+        padding: 3.2rem 0 3.2rem 3.6rem;
+    }
+
+    @include mixins.media('lg') {
+        padding-left: 3.4rem;
     }
 
     &:hover {
@@ -92,7 +96,10 @@
         border-radius: variables.$border-radius-sm;
         font-size: variables.$font-size-3lg;
         color: variables.$color-white;
-        background-color: variables.$color-orange;
+
+        &--1 {
+            background-color: variables.$color-orange;
+        }
 
         &--2 {
             background-color: variables.$color-yellow;
@@ -105,24 +112,31 @@
 
     &__content {
         margin-top: 3.4rem;
+
         @include mixins.flex(flex-start, stretch, column, 0.8rem);
 
         @include mixins.media('md') {
             margin-top: 0;
         }
+    }
 
-        .heading--card,
-        .text--card {
-            text-align: left;
-        }
+    &__heading,
+    &__text {
+        text-align: left;
+    }
 
-        .heading--card {
-            font-size: variables.$font-size-2md;
-            letter-spacing: 0;
-        }
+    &__heading {
+        font-size: variables.$font-size-2md;
+        letter-spacing: 0.4px;
 
-        .text--card {
-            line-height: variables.$line-height-2md;
+        @include mixins.media('lg') {
+            letter-spacing: 0.5px;
+            padding-top: 0.5rem;
         }
+    }
+
+    &__text {
+        line-height: variables.$line-height-2md;
+        letter-spacing: 0.5px;
     }
 }

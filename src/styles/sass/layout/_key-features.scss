@@ -1,21 +1,38 @@
 @use '../abstracts/mixins';
 
 .key-features {
-    &__main {
-        margin: 9.3rem 4rem 0;
+    max-width: 144rem;
+    margin: 9.3rem 4rem 0;
+    box-sizing: border-box;
+
+    @include mixins.media('lg') {
+        padding: 0 0 1rem 14rem;
+        margin: 6.5rem auto 0;
+        gap: 6rem;
+        display: grid;
+        grid-template-columns: 0.86fr 1fr;
     }
 
     &__picture {
         width: 100%;
+        box-sizing: border-box;
 
         @include mixins.media('md') {
-            width: auto;
             padding: 2.7rem 12.15rem;
+        }
+
+        @include mixins.media('lg') {
+            grid-column: 2 / -1;
+            padding: 0;
         }
     }
 
     &__img {
         width: 100%;
+
+        @include mixins.media('lg') {
+            width: 104%;
+        }
     }
 
     &__content {
@@ -24,12 +41,21 @@
         @include mixins.media('md') {
             margin: 3.6rem 5.2rem;
         }
+
+        @include mixins.media('lg') {
+            grid-row: 1 / -1;
+            margin: 0;
+        }
     }
 
     &__text {
         .text--large {
             margin-top: 1.9rem;
             letter-spacing: 0;
+
+            @include mixins.media('lg') {
+                letter-spacing: variables.$letter-spacing-sm;
+            }
         }
 
         .text--light-2 {
@@ -38,6 +64,12 @@
             @include mixins.media('md') {
                 margin-top: 3.2rem;
                 padding-right: 3rem;
+            }
+
+            @include mixins.media('lg') {
+                margin-top: 3rem;
+                padding-right: 4rem;
+                letter-spacing: variables.$letter-spacing-sm;
             }
         }
     }
@@ -49,6 +81,10 @@
         @include mixins.media('md') {
             margin-top: 7rem;
             gap: 0;
+        }
+
+        @include mixins.media('lg') {
+            margin-top: 6.5rem;
         }
     }
 }
