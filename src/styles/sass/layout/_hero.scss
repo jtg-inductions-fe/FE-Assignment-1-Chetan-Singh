@@ -95,11 +95,7 @@
     }
 
     &__banners {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 3.2rem;
+        @include mixins.flex(center, center, column, 3.2rem);
 
         @include mixins.media('md') {
             padding: 7rem 14.4rem;
