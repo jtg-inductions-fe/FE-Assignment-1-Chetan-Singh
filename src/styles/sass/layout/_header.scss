@@ -5,7 +5,6 @@
     box-sizing: border-box;
     max-width: 139rem;
     padding: 3.5rem 1.6rem;
-    position: relative;
     @include mixins.flex(space-between, start);
 
     @include mixins.media('md') {
@@ -23,15 +22,14 @@
         z-index: 100;
         position: absolute;
         top: 12rem;
+        bottom: 0;
         width: 100%;
         left: 0;
         padding: 1rem 0 4rem;
         font-size: variables.$font-size-md;
-        height: 76.2vh;
         transform-origin: top;
         transform: scaleY(0);
         background-color: variables.$color-white;
-        align-self: center;
         @include mixins.flex(space-between, stretch, column);
 
         @include mixins.media('lg') {
@@ -46,6 +44,7 @@
             font-size: variables.$font-size-sm;
             background-color: transparent;
             transform: scaleY(1);
+            align-self: center;
         }
     }
 
