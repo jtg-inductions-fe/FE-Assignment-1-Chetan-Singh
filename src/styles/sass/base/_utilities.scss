@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .active {
     animation: popDown variables.$duration-sm forwards;
@@ -15,5 +16,17 @@
 
     .hidden {
         animation: popUp 0s;
+    }
+}
+
+.scroll {
+    overflow: visible;
+}
+
+.no-scroll {
+    overflow: hidden;
+
+    @include mixins.media('lg') {
+        overflow: visible;
     }
 }

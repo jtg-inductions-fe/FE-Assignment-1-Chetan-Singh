@@ -12,10 +12,6 @@ h1 {
 
 body {
     font-family: variables.$font-family-primary;
-
-    @include mixins.media('lg') {
-        overflow: visible !important;
-    }
 }
 
 button,

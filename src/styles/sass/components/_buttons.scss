@@ -69,12 +69,18 @@
         }
     }
 
-    &--pink-text {
+    &--white-secondary {
         padding: 1.4rem 3.2rem;
         border-radius: variables.$border-radius-lg;
         color: variables.$color-secondary;
-        @include mixins.flex(center, center);
         box-shadow: variables.$shadow-3;
+
+        @include mixins.flex(center, center);
+
+        &:hover,
+        &:focus {
+            outline: 1px solid variables.$color-secondary;
+        }
 
         .icon-explore-bag {
             font-size: variables.$font-size-3md;
@@ -93,9 +99,14 @@
         outline: 1px solid variables.$color-light;
         color: variables.$color-dark;
         border-radius: variables.$border-radius-lg;
-        @include mixins.flex(center, center);
-        gap: 1.2rem;
         letter-spacing: variables.$letter-spacing-sm;
+
+        @include mixins.flex(center, center, row, 1.2rem);
+
+        &:hover,
+        &:focus {
+            outline: 1px solid variables.$color-primary;
+        }
 
         .icon-play-button {
             color: variables.$color-primary;

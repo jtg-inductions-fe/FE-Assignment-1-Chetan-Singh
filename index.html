@@ -88,19 +88,24 @@
                     />
                 </div>
                 <div class="hero__picture">
-                    <img
-                        srcset="
-                            assets/hero.png,
-                            assets/hero-tablet.png  2x,
-                            assets/hero-desktop.png 3x
-                        "
-                        src="assets/hero.png"
-                        alt="Collage of people travelling all over the world"
-                        class="hero__img"
-                    />
+                    <picture>
+                        <source
+                            srcset="/assets/hero-desktop.png"
+                            media="(min-width: 1025px)"
+                        />
+                        <source
+                            srcset="/assets/hero-tablet.png"
+                            media="(min-width: 768px)"
+                        />
+                        <img
+                            src="/assets/hero.png"
+                            alt="Collage of people travelling all over the world"
+                            class="hero__img"
+                        />
+                    </picture>
                 </div>
                 <div class="hero__content">
-                    <a href="#explore" class="btn btn--pink-text"
+                    <a href="#explore" class="btn btn--white-secondary"
                         ><span>Explore the world!</span
                         ><span class="icon-explore-bag"></span
                     ></a>
