@@ -92,7 +92,7 @@
         border-radius: variables.$border-radius-lg;
         outline: 1px solid variables.$color-light;
         color: variables.$color-dark;
-        border-radius: 10rem;
+        border-radius: variables.$border-radius-lg;
         @include mixins.flex(center, center);
         gap: 1.2rem;
         letter-spacing: variables.$letter-spacing-sm;
