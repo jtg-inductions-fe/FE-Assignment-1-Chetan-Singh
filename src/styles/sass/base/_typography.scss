@@ -1,0 +1,59 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.heading {
+    font-weight: variables.$font-weight-lg;
+    line-height: variables.$line-height-md;
+
+    &--main {
+        font-size: variables.$font-size-3lg;
+        text-align: center;
+        margin-top: 1.6rem;
+        padding: 0 2rem;
+        letter-spacing: variables.$letter-spacing-md;
+
+        @include mixins.media('md') {
+            font-size: variables.$font-size-3xl;
+            padding: 0 9rem 0 8rem;
+            margin: 0;
+        }
+
+        @include mixins.media('lg') {
+            margin-top: 0.5rem;
+            font-size: variables.$font-size-4xl;
+            padding: 0;
+            text-align: left;
+            letter-spacing: variables.$letter-spacing-lg;
+        }
+    }
+
+    &__decoration {
+        color: variables.$color-secondary;
+    }
+}
+
+.text {
+    font-weight: variables.$font-weight-md;
+    line-height: variables.$line-height-lg;
+    margin: 0;
+    color: variables.$color-grey-2;
+
+    &--light {
+        font-size: variables.$font-size-2sm;
+        text-align: center;
+        margin-top: 2.4rem;
+        letter-spacing: variables.$letter-spacing-sm;
+
+        @include mixins.media('md') {
+            margin: 0;
+            font-size: variables.$font-size-md;
+            padding: 0 17rem;
+        }
+
+        @include mixins.media('lg') {
+            text-align: left;
+            padding: 0;
+            letter-spacing: variables.$letter-spacing-md;
+        }
+    }
+}

@@ -1,10 +1,12 @@
 /*--------------------------*\
         COLORS
 \*--------------------------*/
+
 $color-white: #fff;
 
 $color-light: #eee;
 $color-dark: #222831;
+$color-dark-2: #0000001a;
 
 $color-primary: #5d50c6;
 $color-primary-dark: #3c1e9e;
@@ -12,10 +14,11 @@ $color-secondary: #f85e9f;
 $color-orange: #ff5722;
 $color-yellow-light: #facd4914;
 $color-yellow: #facd49;
-$color-grey-light: #e5e5e5;
-$color-grey: #191825bf;
-$color-dark-2: #0000001a;
+
+$color-grey-3: #00000012;
 $color-grey-2: #19182580;
+$color-grey: #191825bf;
+$color-grey-light: #e5e5e5;
 
 /*--------------------------*\
         SHADOWS
@@ -23,6 +26,7 @@ $color-grey-2: #19182580;
 
 $shadow-1: 0 4.1rem 8.9rem 0 $color-dark-2;
 $shadow-2: 0 0.5rem 11rem 0 $color-dark-2;
+$shadow-3: 0 3.4rem 7.5rem $color-grey-3;
 
 /*--------------------------*\
         TYPOGRAPHY
@@ -30,10 +34,11 @@ $shadow-2: 0 0.5rem 11rem 0 $color-dark-2;
 
 $font-family-primary: Roboto, sans-serif;
 
-$font-size-3xl: 6.9rem;
+$font-size-4xl: 6.9rem;
+$font-size-3xl: 5.6rem;
 $font-size-2xl: 4.4rem;
 $font-size-xl: 4.2rem;
-$font-size-3lg: 3.7rem;
+$font-size-3lg: 4rem;
 $font-size-2lg: 3.2rem;
 $font-size-lg: 2.8rem;
 $font-size-3md: 2.4rem;
@@ -45,9 +50,17 @@ $font-size-sm: 1.4rem;
 $font-weight-lg: 700;
 $font-weight-md: 400;
 
+$line-height-lg: 160%;
+$line-height-md: 120%;
+
+$letter-spacing-lg: 1.6px;
+$letter-spacing-md: 1px;
+$letter-spacing-sm: 0.5px;
+
 /*--------------------------*\
         GRID
 \*--------------------------*/
+
 $gutter-sm: 1.6rem;
 $gutter: 3.2rem;
 $gutter-y: 1.6rem;
@@ -57,4 +70,11 @@ $gutter-x-sm: 1.6rem;
 /*--------------------------*\
         TRANSITIONS
 \*--------------------------*/
+
 $duration-sm: 0.2s;
+
+/*--------------------------*\
+        BORDERS
+\*--------------------------*/
+
+$border-radius-lg: 10rem;

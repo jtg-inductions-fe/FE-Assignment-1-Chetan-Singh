@@ -11,6 +11,9 @@ function handleMenuOpen() {
 
     menuIcon.classList.add('icon-close');
     menuIcon.classList.remove('icon-menu');
+
+    document.body.classList.remove('scroll');
+    document.body.classList.add('no-scroll');
 }
 
 /**
@@ -22,6 +25,9 @@ function handleMenuClose() {
 
     menuIcon.classList.add('icon-menu');
     menuIcon.classList.remove('icon-close');
+
+    document.body.classList.add('scroll');
+    document.body.classList.remove('no-scroll');
 }
 
 /**

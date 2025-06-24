@@ -20,7 +20,11 @@
         <header class="header">
             <div class="logo">
                 <a href="#" class="logo__link" aria-label="Home">
-                    <img src="/assets/logo.svg" alt="Travlog logo" />
+                    <img
+                        src="/assets/logo.svg"
+                        alt="Travlog logo"
+                        class="logo__img"
+                    />
                 </a>
             </div>
             <nav
@@ -30,29 +34,35 @@
             >
                 <ul class="header__list">
                     <li class="header__list-item">
-                        <a href="#" class="btn btn--link">Home</a>
+                        <a href="#" class="btn btn--link header__link">Home</a>
                     </li>
                     <li class="header__list-item">
-                        <a href="#discover" class="btn btn--link">Discover</a>
+                        <a href="#discover" class="btn btn--link header__link"
+                            >Discover</a
+                        >
                     </li>
                     <li class="header__list-item">
-                        <a href="#sp-deals" class="btn btn--link"
+                        <a href="#sp-deals" class="btn btn--link header__link"
                             >Special Deals</a
                         >
                     </li>
                     <li class="header__list-item">
-                        <a href="#contact" class="btn btn--link">Contact</a>
+                        <a href="#contact" class="btn btn--link header__link"
+                            >Contact</a
+                        >
                     </li>
                 </ul>
                 <ul class="header__cta-sm">
                     <li class="header__cta-sm-item">
-                        <a class="btn btn--link btn--link-primary" href="#login"
+                        <a
+                            class="btn btn--link btn--link-primary header__link--primary"
+                            href="#login"
                             >Log in</a
                         >
                     </li>
                     <li class="header__cta-sm-item">
                         <a
-                            class="btn btn--link btn--link-primary"
+                            class="btn btn--link btn--link-primary header__link--primary"
                             href="#signup"
                             >Sign Up</a
                         >
@@ -70,9 +80,62 @@
                 aria-controls="header-nav"
                 aria-expanded="false"
             >
-                <span id="icon-menu" class="icon-menu"></span>
+                <span id="icon-menu" class="header__menu-icon icon-menu"></span>
             </button>
         </header>
         <!-- HEADER SECTION ENDS -->
+        <main>
+            <!-- HERO SECTION STARTS -->
+            <section class="hero">
+                <div class="hero__graphic">
+                    <img
+                        src="/assets/rectangle-pattern.svg"
+                        alt="Rectangle graphic pattern"
+                    />
+                </div>
+                <div class="hero__picture">
+                    <picture>
+                        <source
+                            srcset="/assets/hero-desktop.png"
+                            media="(min-width: 1025px)"
+                        />
+                        <source
+                            srcset="/assets/hero-tablet.png"
+                            media="(min-width: 768px)"
+                        />
+                        <img
+                            src="/assets/hero.png"
+                            alt="Collage of people travelling all over the world"
+                            class="hero__img"
+                        />
+                    </picture>
+                </div>
+                <div class="hero__content">
+                    <a href="#explore" class="btn btn--white-secondary"
+                        ><span>Explore the world!</span
+                        ><span class="icon-explore-bag"></span
+                    ></a>
+                    <h1 class="heading heading--main">
+                        Travel
+                        <span class="heading__decoration">top destination</span>
+                        of the world
+                    </h1>
+                    <p class="text text--light">
+                        We always make our customer happy by providing as many
+                        choices as possible
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#login" class="btn btn--primary"
+                            >Get Started</a
+                        >
+                        <a href="#demo" class="btn btn--white"
+                            ><span class="icon-play-button"></span
+                            ><span>Watch Demo</span></a
+                        >
+                    </div>
+                </div>
+            </section>
+            <!-- HERO SECTION ENDS -->
+        </main>
     </body>
 </html>

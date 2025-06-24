@@ -4,6 +4,7 @@
 .btn {
     font-size: variables.$font-size-sm;
     font-weight: variables.$font-weight-lg;
+    white-space: nowrap;
 
     &--link {
         display: inline-block;
@@ -26,11 +27,6 @@
         color: variables.$color-primary;
         margin-bottom: 1rem;
         display: inline-block;
-
-        &:hover,
-        &:focus {
-            color: variables.$color-primary-dark;
-        }
     }
 
     &--text {
@@ -43,21 +39,77 @@
         &:focus {
             color: variables.$color-primary;
             outline: 1px solid variables.$color-primary;
-            border-radius: 100px;
+            border-radius: variables.$border-radius-lg;
         }
     }
 
     &--primary {
-        padding: 1.66rem 3.33rem;
+        padding: 2.4rem 3.2rem;
+        border-radius: variables.$border-radius-lg;
         background-color: variables.$color-primary;
         color: variables.$color-light;
-        border-radius: 100px;
-        transition: transform variables.$duration-sm;
-        outline: none;
+        text-align: center;
+        letter-spacing: variables.$letter-spacing-sm;
+
+        @include mixins.media('md') {
+            padding: 1.66rem 3.33rem;
+            transition: transform variables.$duration-sm;
+            outline: none;
+            letter-spacing: 0;
+
+            &:hover,
+            &:focus {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &--white-secondary {
+        padding: 1.4rem 3.2rem;
+        border-radius: variables.$border-radius-lg;
+        color: variables.$color-secondary;
+        box-shadow: variables.$shadow-3;
+
+        @include mixins.flex(center, center);
 
         &:hover,
         &:focus {
-            transform: scale(1.05);
+            outline: 1px solid variables.$color-secondary;
+        }
+
+        .icon-explore-bag {
+            font-size: variables.$font-size-3md;
+            margin-left: 1.6rem;
+        }
+
+        @include mixins.media('lg') {
+            padding: 1.6rem 4rem;
+            gap: 1rem;
+        }
+    }
+
+    &--white {
+        padding: 2.7rem 3.2rem 2.4rem;
+        border-radius: variables.$border-radius-lg;
+        outline: 1px solid variables.$color-light;
+        color: variables.$color-dark;
+        letter-spacing: variables.$letter-spacing-sm;
+
+        @include mixins.flex(center, center, row, 1.2rem);
+
+        &:hover,
+        &:focus {
+            outline: 1px solid variables.$color-primary;
+        }
+
+        .icon-play-button {
+            color: variables.$color-primary;
+            font-size: 2rem;
+        }
+
+        @include mixins.media('md') {
+            padding: 1.6rem 3.2rem;
+            gap: 1rem;
         }
     }
 }
