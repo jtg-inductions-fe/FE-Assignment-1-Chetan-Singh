@@ -75,8 +75,7 @@
         }
 
         @include mixins.media('lg') {
-            padding-top: 2.95rem;
-            padding-left: 0.8rem;
+            padding: 2.95rem 0 0 0.8rem;
             justify-content: flex-start;
         }
     }

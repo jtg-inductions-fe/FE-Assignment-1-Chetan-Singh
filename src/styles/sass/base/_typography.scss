@@ -14,8 +14,7 @@
 
         @include mixins.media('md') {
             font-size: variables.$font-size-3xl;
-            padding: 0 8rem;
-            padding-right: 9rem;
+            padding: 0 9rem 0 8rem;
             margin: 0;
         }
 

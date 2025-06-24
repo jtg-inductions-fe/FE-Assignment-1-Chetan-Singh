@@ -27,11 +27,6 @@
         color: variables.$color-primary;
         margin-bottom: 1rem;
         display: inline-block;
-
-        &:hover,
-        &:focus {
-            color: variables.$color-primary-dark;
-        }
     }
 
     &--text {
@@ -98,7 +93,6 @@
         border-radius: variables.$border-radius-lg;
         outline: 1px solid variables.$color-light;
         color: variables.$color-dark;
-        border-radius: variables.$border-radius-lg;
         letter-spacing: variables.$letter-spacing-sm;
 
         @include mixins.flex(center, center, row, 1.2rem);
