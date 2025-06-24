@@ -6,7 +6,7 @@
     position: relative;
 
     @include mixins.media('md') {
-        padding: 6rem 6.2rem;
+        padding: 6rem 6.2rem 6.4rem;
         margin: 0 6.4rem;
     }
 
