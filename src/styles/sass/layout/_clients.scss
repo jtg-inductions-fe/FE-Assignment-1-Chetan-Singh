@@ -1,0 +1,58 @@
+@use '../abstracts/mixins';
+
+.clients {
+    padding: 0 1.6rem;
+    margin: 6.4rem 0;
+
+    @include mixins.media('md') {
+        padding: 0;
+        margin: 3.2rem 6.4rem;
+    }
+
+    @include mixins.media('lg') {
+        margin: 0 6.4rem;
+    }
+
+    &__banners {
+        @include mixins.flex(center, center, column, 3.2rem);
+
+        @include mixins.media('md') {
+            padding: 6.6rem 14.4rem;
+        }
+
+        @include mixins.media('lg') {
+            padding: 5.6rem 5.2rem 5.4rem 6.6rem;
+            flex-direction: row;
+            gap: 10rem;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 2.7rem;
+
+        &:first-of-type {
+            padding-top: 0.2rem 2.4rem 0 0;
+
+            @include mixins.media('md') {
+                padding: 0;
+            }
+        }
+
+        @include mixins.media('lg') {
+            gap: 10rem;
+        }
+    }
+
+    &__banner {
+        height: 2rem;
+
+        @include mixins.media('md') {
+            height: 3.2rem;
+        }
+    }
+
+    &__banner-img {
+        height: 100%;
+    }
+}
