@@ -59,13 +59,13 @@
 
     &__number {
         margin: 0;
-        font-size: variables.$font-size-2lgx;
+        font-size: 3.5rem;
         font-weight: variables.$font-weight-lg;
         color: variables.$color-orange;
     }
 
     &__text {
-        margin: 1.6rem 0 0;
-        font-size: variables.$font-size-md;
+        margin: 1.8rem 0 0;
+        font-size: 1.8rem;
     }
 }

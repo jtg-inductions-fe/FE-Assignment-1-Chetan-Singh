@@ -20,14 +20,14 @@
 
     &__nav {
         overflow-y: auto;
-        z-index: 100;
+        z-index: variables.$z-100;
         position: absolute;
         top: 12rem;
         bottom: 0;
         width: 100%;
         left: 0;
         padding: 1rem 0 4rem;
-        font-size: variables.$font-size-md;
+        font-size: 1.8rem;
         transform-origin: top;
         transform: scaleY(0);
         background-color: variables.$color-white;
@@ -43,7 +43,7 @@
             flex-basis: 36%;
             display: block;
             height: auto;
-            font-size: variables.$font-size-sm;
+            font-size: 1.4rem;
             background-color: transparent;
             transform: scaleY(1);
             align-self: center;
@@ -168,7 +168,7 @@
     &__menu {
         line-height: 0;
         background-color: transparent;
-        font-size: variables.$font-size-xl;
+        font-size: 4.2rem;
         color: variables.$color-primary;
         padding: 0.4rem;
         border: none;
@@ -192,7 +192,7 @@
         .icon-close {
             background-color: variables.$color-primary;
             color: variables.$color-white;
-            font-size: variables.$font-size-2lg;
+            font-size: 3.2rem;
             border-radius: 12px;
             padding: 0.5rem;
         }

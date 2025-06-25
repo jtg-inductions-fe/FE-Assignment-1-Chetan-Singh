@@ -7,21 +7,21 @@
     margin: 0;
 
     &--main {
-        font-size: variables.$font-size-3lg;
+        font-size: 4rem;
         text-align: center;
         margin-top: 1.6rem;
         padding: 0 2rem;
         letter-spacing: variables.$letter-spacing-md;
 
         @include mixins.media('md') {
-            font-size: variables.$font-size-3xl;
+            font-size: 5.6rem;
             padding: 0 9rem 0 8rem;
             margin: 0;
         }
 
         @include mixins.media('lg') {
             margin-top: 0.5rem;
-            font-size: variables.$font-size-4xl;
+            font-size: 6.9rem;
             padding: 0;
             text-align: left;
             letter-spacing: variables.$letter-spacing-lg;
@@ -33,14 +33,14 @@
     }
 
     &--sub {
-        font-size: variables.$font-size-2sm;
+        font-size: 1.6rem;
         text-transform: uppercase;
         letter-spacing: variables.$letter-spacing-xl;
         color: variables.$color-secondary;
         text-align: center;
 
         @include mixins.media('md') {
-            font-size: variables.$font-size-2md;
+            font-size: 2.3rem;
             letter-spacing: variables.$letter-spacing-2xl;
         }
 
@@ -50,11 +50,11 @@
     }
 
     &--card {
-        font-size: variables.$font-size-3md;
+        font-size: 2.4rem;
         letter-spacing: variables.$letter-spacing-md;
 
         @include mixins.media('md') {
-            font-size: variables.$font-size-lg;
+            font-size: 2.8rem;
         }
     }
 }
@@ -66,14 +66,14 @@
     color: variables.$color-grey-2;
 
     &--light {
-        font-size: variables.$font-size-2sm;
+        font-size: 1.6rem;
         text-align: center;
         margin-top: 2.4rem;
         letter-spacing: variables.$letter-spacing-sm;
 
         @include mixins.media('md') {
             margin: 0;
-            font-size: variables.$font-size-md;
+            font-size: 1.8rem;
             padding: 0 17rem;
         }
 
@@ -84,41 +84,41 @@
         }
     }
 
-    &--light-2 {
+    &--medium {
         margin-top: 3.6rem;
         padding: 0 1rem;
-        letter-spacing: 0.4px;
+        letter-spacing: variables.$letter-spacing-xs;
         line-height: 150%;
 
         @include mixins.media('md') {
             padding: 0 3rem;
-            letter-spacing: 0.5px;
+            letter-spacing: variables.$letter-spacing-sm;
         }
 
         @include mixins.media('lg') {
+            position: relative;
+            z-index: variables.$z-100;
             margin-top: 3rem;
             padding: 0;
-            letter-spacing: 0.4px;
+            letter-spacing: variables.$letter-spacing-xs;
         }
     }
 
     &--large {
-        font-size: variables.$font-size-2lg;
+        font-size: 3.2rem;
         font-weight: variables.$font-weight-lg;
         color: variables.$color-dark;
         line-height: 111%;
-        padding-left: 1rem;
         letter-spacing: variables.$letter-spacing-sm;
-        // letter-spacing: 0.7px;
         margin-top: 2rem;
         text-align: center;
 
         @include mixins.media('md') {
-            font-size: variables.$font-size-3lg;
+            font-size: 4rem;
         }
 
         @include mixins.media('lg') {
-            font-size: variables.$font-size-2xl;
+            font-size: 4.4rem;
             letter-spacing: variables.$letter-spacing-md;
             line-height: variables.$line-height-md;
             text-align: left;
@@ -127,7 +127,7 @@
 
     &--card {
         text-align: center;
-        font-size: variables.$font-size-md;
+        font-size: 1.8rem;
         margin: 0;
         padding: 0;
     }

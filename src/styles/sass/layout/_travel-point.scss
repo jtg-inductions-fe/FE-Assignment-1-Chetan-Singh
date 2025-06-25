@@ -7,11 +7,10 @@
 
     @include mixins.media('md') {
         margin: 0 6.4rem;
-        padding: 7.4rem 0 0;
+        padding: 6.4rem 0 0;
     }
 
     @include mixins.media('lg') {
-        padding: 4.58rem 0 0;
         margin: 0 auto;
         display: grid;
         grid-template-columns: 1.55fr 1fr;
@@ -24,8 +23,7 @@
             display: block;
             position: absolute;
             right: 0;
-            top: 30.2rem;
-            z-index: -1;
+            bottom: 19.8%;
         }
     }
 
@@ -50,7 +48,7 @@
         margin-top: 3.75rem;
 
         @include mixins.media('md') {
-            margin: 6.4rem 0;
+            margin: 6.8rem 0;
         }
 
         @include mixins.media('lg') {
@@ -62,16 +60,17 @@
     &__cards {
         margin-top: 3.2rem;
         display: grid;
-        gap: 1.6rem;
+        gap: 1.3rem;
 
         @include mixins.media('md') {
             grid-template-columns: 1fr 1fr;
-            margin-top: 6.65rem;
+            margin-top: 6rem;
             gap: 3.2rem;
             padding: 0 3.2rem;
         }
 
         @include mixins.media('lg') {
+            margin-top: 6.4rem;
             padding: 0;
         }
     }

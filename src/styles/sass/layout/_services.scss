@@ -1,8 +1,9 @@
 @use '../abstracts/mixins';
 
 .services {
+    box-sizing: border-box;
     margin: 6.4rem 1.6rem 0;
-    max-width: 119.7rem;
+    max-width: 144rem;
 
     @include mixins.media('md') {
         margin: 0 6.4rem;
@@ -11,7 +12,7 @@
 
     @include mixins.media('lg') {
         margin: 0 auto;
-        padding: 5.4rem 0;
+        padding: 5.4rem 12.4rem;
         display: grid;
         grid-template-columns: 1fr 1.92fr;
         align-items: center;
@@ -22,7 +23,7 @@
 
         @include mixins.media('lg') {
             text-align: left;
-            padding-top: 1rem;
+            padding: 1rem 0 0 0.5rem;
         }
     }
 
