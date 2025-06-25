@@ -3,11 +3,11 @@
 .travel-point {
     max-width: 144rem;
     margin: 7.1rem 1.6rem 0;
+    position: relative;
 
     @include mixins.media('md') {
         margin: 0 6.4rem;
         padding: 7.4rem 0 0;
-        padding-left: 3.2rem;
     }
 
     @include mixins.media('lg') {
@@ -17,8 +17,29 @@
         grid-template-columns: 1.55fr 1fr;
     }
 
+    &__graphic {
+        display: none;
+
+        @include mixins.media('lg') {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 30.2rem;
+            z-index: -1;
+        }
+    }
+
     &__picture {
+        box-sizing: border-box;
         width: 100%;
+
+        @include mixins.media('md') {
+            padding-left: 3.2rem;
+        }
+
+        @include mixins.media('lg') {
+            padding-left: 0;
+        }
     }
 
     &__img {
@@ -40,11 +61,18 @@
 
     &__cards {
         margin-top: 3.2rem;
-        @include mixins.flex(flex-start, stretch, row, 1.6rem, wrap);
+        display: grid;
+        gap: 1.6rem;
 
         @include mixins.media('md') {
+            grid-template-columns: 1fr 1fr;
             margin-top: 6.65rem;
             gap: 3.2rem;
+            padding: 0 3.2rem;
+        }
+
+        @include mixins.media('lg') {
+            padding: 0;
         }
     }
 }

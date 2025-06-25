@@ -52,19 +52,10 @@
 }
 
 .travel-point-card {
-    width: 100%;
     padding: 3.6rem 0 3.7rem;
     text-align: center;
     border: 1px solid variables.$color-grey-4;
     border-radius: variables.$border-radius-sm;
-
-    @include mixins.media('md') {
-        flex-basis: 47.8%;
-    }
-
-    @include mixins.media('md') {
-        flex-basis: 45.98%;
-    }
 
     &__number {
         margin: 0;
@@ -74,8 +65,7 @@
     }
 
     &__text {
-        margin: 0;
-        margin-top: 1.6rem;
+        margin: 1.6rem 0 0;
         font-size: variables.$font-size-md;
     }
 }
