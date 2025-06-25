@@ -73,15 +73,14 @@
 .key-features-card {
     padding: 3.4rem;
     border-radius: variables.$border-radius-sm;
-    transition: outline 0.1s;
 
     @include mixins.media('md') {
         @include mixins.flex(flex-start, center, row, 3.2rem);
-        padding: 3.2rem 0 3.2rem 3.6rem;
+        padding: 3rem 0 3.2rem 3.6rem;
     }
 
     @include mixins.media('lg') {
-        padding-left: 3.4rem;
+        padding: 3.2rem 0 3.2rem 3.4rem;
     }
 
     &:hover {
@@ -94,24 +93,25 @@
         height: 10rem;
         padding: 3rem;
         border-radius: variables.$border-radius-sm;
-        font-size: variables.$font-size-3lg;
+        font-size: 4rem;
         color: variables.$color-white;
 
-        &--1 {
+        &--location {
             background-color: variables.$color-orange;
         }
 
-        &--2 {
+        &--calendar {
             background-color: variables.$color-yellow;
         }
 
-        &--3 {
+        &--coupon {
             background-color: variables.$color-secondary;
+            font-size: 3.2rem;
         }
     }
 
     &__content {
-        margin-top: 3.4rem;
+        margin-top: 3.3rem;
 
         @include mixins.flex(flex-start, stretch, column, 0.8rem);
 
@@ -126,17 +126,16 @@
     }
 
     &__heading {
-        font-size: variables.$font-size-2md;
-        letter-spacing: 0.4px;
+        font-size: 2.3rem;
+        letter-spacing: variables.$letter-spacing-xs;
 
         @include mixins.media('lg') {
-            letter-spacing: 0.5px;
-            padding-top: 0.5rem;
+            letter-spacing: variables.$letter-spacing-sm;
         }
     }
 
     &__text {
-        line-height: variables.$line-height-2md;
-        letter-spacing: 0.5px;
+        line-height: variables.$line-height-md;
+        letter-spacing: variables.$letter-spacing-sm;
     }
 }

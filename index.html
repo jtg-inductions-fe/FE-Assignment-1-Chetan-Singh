@@ -259,6 +259,8 @@
                         src="/assets/travel-point-graphic.png"
                         alt=""
                         loading="lazy"
+                        role="presentation"
+                        aria-hidden="true"
                     />
                 </div>
                 <div class="travel-point__picture">
@@ -316,34 +318,49 @@
                 </div>
             </section>
             <!-- TRAVEL POINT SECTION ENDS -->
+
+            <!-- KEY FEATURES SECTION STARTS -->
             <section class="key-features">
-                <!-- <div class="key-features__main"> -->
                 <div class="key-features__picture">
-                    <img
-                        srcset="
-                            /assets/key-features.png,
-                            /assets/key-features-tablet.png  2x,
-                            /assets/key-features-desktop.png 3x
-                        "
-                        src="/assets/key-features.png"
-                        alt="Images of a property and a guy surfing"
-                        class="key-features__img"
-                    />
+                    <picture>
+                        <source
+                            srcset="/assets/key-features-desktop.png"
+                            media="(min-width: 1025px)"
+                        />
+                        <source
+                            srcset="/assets/key-features-tablet.png"
+                            media="(min-width: 768px)"
+                        />
+                        <img
+                            src="/assets/key-features.png"
+                            alt="A man surfing and an old building"
+                            class="key-features__img"
+                            loading="lazy"
+                        />
+                    </picture>
                 </div>
                 <div class="key-features__content">
                     <div class="key-features__text">
-                        <h2 class="heading heading--sub">Key features</h2>
-                        <p class="text text--large">We offer best services</p>
-                        <p class="text text--light text--light-2">
+                        <h2
+                            class="heading heading--sub key-features__text--heading"
+                        >
+                            Key features
+                        </h2>
+                        <p class="text text--large key-features__text--large">
+                            We offer best services
+                        </p>
+                        <p
+                            class="text text--light text--medium key-features__text--medium"
+                        >
                             Contrary to popular belief, Lorem Ipsum is not
                             simply random text. It has roots in a piece of
                             classical Latin literature from 45 BC.
                         </p>
                     </div>
-                    <div class="key-features__cards">
-                        <div class="key-features-card">
+                    <ul class="key-features__cards">
+                        <li class="key-features-card">
                             <div
-                                class="key-features-card__img key-features-card__img--1"
+                                class="key-features-card__img key-features-card__img--location"
                             >
                                 <span class="icon-location"></span>
                             </div>
@@ -359,10 +376,10 @@
                                     Lorem Ipsum is not simply random text
                                 </p>
                             </div>
-                        </div>
-                        <div class="key-features-card">
+                        </li>
+                        <li class="key-features-card">
                             <div
-                                class="key-features-card__img key-features-card__img--2"
+                                class="key-features-card__img key-features-card__img--calendar"
                             >
                                 <span class="icon-calendar"></span>
                             </div>
@@ -378,10 +395,10 @@
                                     It has roots in a piece of classical
                                 </p>
                             </div>
-                        </div>
-                        <div class="key-features-card">
+                        </li>
+                        <li class="key-features-card">
                             <div
-                                class="key-features-card__img key-features-card__img--3"
+                                class="key-features-card__img key-features-card__img--coupon"
                             >
                                 <span class="icon-ticket"></span>
                             </div>
@@ -397,11 +414,11 @@
                                     Lorem Ipsum is not simply random text
                                 </p>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
-                <!-- </div> -->
             </section>
+            <!-- KEY FEATURES SECTION ENDS -->
         </main>
     </body>
 </html>

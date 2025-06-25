@@ -1,4 +1,5 @@
 @use '../abstracts/mixins';
+@use '../abstracts/variables';
 
 .key-features {
     max-width: 144rem;
@@ -7,8 +8,8 @@
 
     @include mixins.media('lg') {
         padding: 0 0 1rem 14rem;
-        margin: 6.5rem auto 0;
-        gap: 6rem;
+        margin: 5.9rem auto 0;
+        gap: 5.4rem;
         display: grid;
         grid-template-columns: 0.86fr 1fr;
     }
@@ -29,14 +30,10 @@
 
     &__img {
         width: 100%;
-
-        @include mixins.media('lg') {
-            width: 104%;
-        }
     }
 
     &__content {
-        margin: 10.7rem 0.8rem 0;
+        margin: 10.5rem 0.8rem 0;
 
         @include mixins.media('md') {
             margin: 3.6rem 5.2rem;
@@ -49,26 +46,11 @@
     }
 
     &__text {
-        .text--large {
+        &--large {
             margin-top: 1.9rem;
             letter-spacing: 0;
 
             @include mixins.media('lg') {
-                letter-spacing: variables.$letter-spacing-sm;
-            }
-        }
-
-        .text--light-2 {
-            margin-top: 3.4rem;
-
-            @include mixins.media('md') {
-                margin-top: 3.2rem;
-                padding-right: 3rem;
-            }
-
-            @include mixins.media('lg') {
-                margin-top: 3rem;
-                padding-right: 4rem;
                 letter-spacing: variables.$letter-spacing-sm;
             }
         }
@@ -84,7 +66,7 @@
         }
 
         @include mixins.media('lg') {
-            margin-top: 6.5rem;
+            margin-top: 9.4rem;
         }
     }
 }
