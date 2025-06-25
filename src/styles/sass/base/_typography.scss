@@ -4,6 +4,7 @@
 .heading {
     font-weight: variables.$font-weight-lg;
     line-height: variables.$line-height-md;
+    margin: 0;
 
     &--main {
         font-size: variables.$font-size-3lg;
@@ -30,6 +31,31 @@
     &__decoration {
         color: variables.$color-secondary;
     }
+
+    &--sub {
+        font-size: variables.$font-size-2sm;
+        text-transform: uppercase;
+        letter-spacing: variables.$letter-spacing-xl;
+        color: variables.$color-secondary;
+
+        @include mixins.media('md') {
+            font-size: variables.$font-size-2md;
+            letter-spacing: variables.$letter-spacing-2xl;
+        }
+
+        @include mixins.media('lg') {
+            padding-left: 1rem;
+        }
+    }
+
+    &--card {
+        font-size: variables.$font-size-3md;
+        letter-spacing: variables.$letter-spacing-md;
+
+        @include mixins.media('md') {
+            font-size: variables.$font-size-lg;
+        }
+    }
 }
 
 .text {
@@ -55,5 +81,32 @@
             padding: 0;
             letter-spacing: variables.$letter-spacing-md;
         }
+    }
+
+    &--large {
+        font-size: variables.$font-size-2lg;
+        font-weight: variables.$font-weight-lg;
+        color: variables.$color-dark;
+        line-height: 111%;
+        padding-left: 1rem;
+        letter-spacing: variables.$letter-spacing-sm;
+        margin-top: 2rem;
+
+        @include mixins.media('md') {
+            font-size: variables.$font-size-3lg;
+        }
+
+        @include mixins.media('lg') {
+            font-size: variables.$font-size-2xl;
+            letter-spacing: variables.$letter-spacing-md;
+            line-height: variables.$line-height-md;
+        }
+    }
+
+    &--card {
+        text-align: center;
+        font-size: variables.$font-size-md;
+        margin: 0;
+        padding: 0;
     }
 }
