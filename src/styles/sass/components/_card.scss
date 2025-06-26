@@ -139,3 +139,45 @@
         letter-spacing: variables.$letter-spacing-sm;
     }
 }
+
+.testimonials-card {
+    text-align: center;
+
+    &__picture {
+        padding: 6.2rem 13.5rem;
+    }
+
+    &__img {
+        width: 12.8rem;
+        height: 12.8rem;
+    }
+
+    &__title {
+        font-size: variables.$font-size-lg;
+        margin-top: 0.4rem;
+
+        &--name {
+            color: variables.$color-orange;
+        }
+
+        &--role {
+            font-size: variables.$font-size-2md;
+            color: variables.$color-grey;
+        }
+    }
+
+    &__rating {
+        @include mixins.flex(center, stretch, row, 1.8rem);
+    }
+
+    &__star {
+        font-size: 2.8rem;
+    }
+
+    &__text {
+        font-size: variables.$font-size-md;
+        color: variables.$color-grey;
+        margin-top: 6.4rem;
+        letter-spacing: variables.$letter-spacing-xxs;
+    }
+}

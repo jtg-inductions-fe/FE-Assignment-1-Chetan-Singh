@@ -1,0 +1,56 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.testimonials {
+    margin-top: 6.8rem;
+    position: relative;
+
+    &__head {
+    }
+
+    &__reviews {
+    }
+
+    &__pagination-item {
+        line-height: 0;
+        padding: 0;
+    }
+
+    &__pagination {
+        &--1,
+        &--2,
+        &--3 {
+            width: 2.4rem;
+            height: 2.4rem;
+            padding: 0;
+            margin: 0;
+            // border: none;
+        }
+    }
+
+    &__arrows {
+        font-size: 0.8rem;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: -4.8rem;
+
+        &--prev,
+        &--next {
+            width: 6.4rem;
+            height: 6.4rem;
+            border-radius: 50%;
+            font-weight: variables.$font-weight-lg;
+            background-color: variables.$color-primary;
+            color: variables.$color-white;
+            border: none;
+
+            &:disabled {
+                background-color: variables.$color-white;
+                color: variables.$color-black;
+                outline: 1px solid black;
+            }
+        }
+    }
+}
