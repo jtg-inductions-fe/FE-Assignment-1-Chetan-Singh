@@ -50,3 +50,22 @@
         }
     }
 }
+
+.travel-point-card {
+    padding: 3.6rem 0 3.7rem;
+    text-align: center;
+    border: 1px solid variables.$color-grey-4;
+    border-radius: variables.$border-radius-sm;
+
+    &__number {
+        margin: 0;
+        font-size: 3.5rem;
+        font-weight: variables.$font-weight-lg;
+        color: variables.$color-orange;
+    }
+
+    &__text {
+        margin: 1.8rem 0 0;
+        font-size: 1.8rem;
+    }
+}

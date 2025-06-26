@@ -1,0 +1,77 @@
+@use '../abstracts/mixins';
+
+.travel-point {
+    max-width: 144rem;
+    margin: 7.1rem 1.6rem 0;
+    position: relative;
+
+    @include mixins.media('md') {
+        margin: 0 6.4rem;
+        padding: 6.4rem 0 0;
+    }
+
+    @include mixins.media('lg') {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.55fr 1fr;
+    }
+
+    &__graphic {
+        display: none;
+
+        @include mixins.media('lg') {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 19.8%;
+        }
+    }
+
+    &__picture {
+        box-sizing: border-box;
+        width: 100%;
+
+        @include mixins.media('md') {
+            padding-left: 3.2rem;
+        }
+
+        @include mixins.media('lg') {
+            padding-left: 0;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__content {
+        margin-top: 3.75rem;
+
+        @include mixins.media('md') {
+            margin: 6.8rem 0;
+        }
+
+        @include mixins.media('lg') {
+            margin-top: 3.4rem;
+            padding-right: 11.7rem;
+        }
+    }
+
+    &__cards {
+        margin-top: 3.2rem;
+        display: grid;
+        gap: 1.3rem;
+
+        @include mixins.media('md') {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 6rem;
+            gap: 3.2rem;
+            padding: 0 3.2rem;
+        }
+
+        @include mixins.media('lg') {
+            margin-top: 6.4rem;
+            padding: 0;
+        }
+    }
+}
