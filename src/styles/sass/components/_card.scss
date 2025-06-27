@@ -69,3 +69,73 @@
         font-size: 1.8rem;
     }
 }
+
+.key-features-card {
+    padding: 3.4rem;
+    border-radius: variables.$border-radius-sm;
+
+    @include mixins.media('md') {
+        @include mixins.flex(flex-start, center, row, 3.2rem);
+        padding: 3rem 0 3.2rem 3.6rem;
+    }
+
+    @include mixins.media('lg') {
+        padding: 3.2rem 0 3.2rem 3.4rem;
+    }
+
+    &:hover {
+        outline: 1px solid variables.$color-grey-4;
+    }
+
+    &__img {
+        box-sizing: border-box;
+        width: 10rem;
+        height: 10rem;
+        padding: 3rem;
+        border-radius: variables.$border-radius-sm;
+        font-size: 4rem;
+        color: variables.$color-white;
+
+        &--location {
+            background-color: variables.$color-orange;
+        }
+
+        &--calendar {
+            background-color: variables.$color-yellow;
+        }
+
+        &--coupon {
+            background-color: variables.$color-secondary;
+            font-size: 3.2rem;
+        }
+    }
+
+    &__content {
+        margin-top: 3.3rem;
+
+        @include mixins.flex(flex-start, stretch, column, 0.8rem);
+
+        @include mixins.media('md') {
+            margin-top: 0;
+        }
+    }
+
+    &__heading,
+    &__text {
+        text-align: left;
+    }
+
+    &__heading {
+        font-size: 2.3rem;
+        letter-spacing: variables.$letter-spacing-xs;
+
+        @include mixins.media('lg') {
+            letter-spacing: variables.$letter-spacing-sm;
+        }
+    }
+
+    &__text {
+        line-height: variables.$line-height-md;
+        letter-spacing: variables.$letter-spacing-sm;
+    }
+}

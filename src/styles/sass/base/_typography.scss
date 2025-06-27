@@ -3,7 +3,7 @@
 
 .heading {
     font-weight: variables.$font-weight-lg;
-    line-height: variables.$line-height-md;
+    line-height: variables.$line-height-sm;
     margin: 0;
 
     &--main {
@@ -88,7 +88,7 @@
         margin-top: 3.6rem;
         padding: 0 1rem;
         letter-spacing: variables.$letter-spacing-xs;
-        line-height: 150%;
+        line-height: variables.$line-height-md;
 
         @include mixins.media('md') {
             padding: 0 3rem;
@@ -120,7 +120,7 @@
         @include mixins.media('lg') {
             font-size: 4.4rem;
             letter-spacing: variables.$letter-spacing-md;
-            line-height: variables.$line-height-md;
+            line-height: variables.$line-height-sm;
             text-align: left;
         }
     }
