@@ -4,8 +4,22 @@
 .testimonials {
     margin-top: 6.8rem;
     position: relative;
+    padding-bottom: 6.4rem;
+    max-width: 144rem;
+
+    @include mixins.media('md') {
+        padding-top: 6rem;
+    }
+
+    @include mixins.media('lg') {
+        margin: 0 auto;
+    }
 
     &__head {
+        &--main,
+        &--sub {
+            text-align: center;
+        }
     }
 
     &__reviews {
@@ -17,6 +31,14 @@
     }
 
     &__pagination {
+        margin-top: 6.4rem;
+        display: flex;
+        gap: 2.4rem;
+
+        @include mixins.media('md') {
+            margin-top: 5.5rem;
+        }
+
         &--1,
         &--2,
         &--3 {
@@ -24,17 +46,36 @@
             height: 2.4rem;
             padding: 0;
             margin: 0;
-            // border: none;
+            border: none;
+            border-radius: 50%;
+
+            &[aria-selected='true'] {
+                background-color: variables.$color-secondary;
+            }
         }
     }
 
     &__arrows {
+        box-sizing: border-box;
         font-size: 0.8rem;
         width: 100%;
         display: flex;
         justify-content: space-between;
         position: absolute;
-        bottom: -4.8rem;
+        bottom: -11rem;
+        padding: 0 1.5rem;
+
+        @include mixins.media('md') {
+            font-size: 1.2rem;
+            bottom: 50%;
+            padding: 0 6.4rem;
+        }
+
+        @include mixins.media('lg') {
+            font-size: 1.2rem;
+            bottom: 50%;
+            padding: 0 12rem;
+        }
 
         &--prev,
         &--next {
@@ -45,6 +86,11 @@
             background-color: variables.$color-primary;
             color: variables.$color-white;
             border: none;
+
+            @include mixins.media('md') {
+                width: 10rem;
+                height: 10rem;
+            }
 
             &:disabled {
                 background-color: variables.$color-white;
