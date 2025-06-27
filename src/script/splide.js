@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
             data.list.classList.add('testimonials__pagination');
 
             data.items.forEach((item, index) => {
-                // item.classList.add('testimonials__pagination-item');
                 item.button.classList.add(
                     'testimonials__pagination--' + (index + 1),
                 );
