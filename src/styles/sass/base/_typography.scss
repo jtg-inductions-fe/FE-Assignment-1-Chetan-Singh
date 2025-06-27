@@ -41,7 +41,7 @@
 
         @include mixins.media('md') {
             font-size: 2.3rem;
-            letter-spacing: variables.$letter-spacing-2xl;
+            letter-spacing: variables.$letter-spacing-xxl;
         }
 
         @include mixins.media('lg') {

@@ -6,4 +6,4 @@ import '../styles/sass/main.scss';
 import './modal';
 
 // SPLIDE CAROUSEL FUNCTIONALITY
-import './splide';
+import('./carousel');
