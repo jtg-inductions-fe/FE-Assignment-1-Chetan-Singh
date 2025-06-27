@@ -143,8 +143,15 @@
 .testimonials-card {
     text-align: center;
 
+    &[aria-hidden='true'] {
+    }
+
     &__picture {
         padding: 6.2rem 13.5rem;
+
+        @include mixins.media('md') {
+            padding: 5.4rem 13.5rem;
+        }
     }
 
     &__img {
@@ -172,12 +179,20 @@
 
     &__star {
         font-size: 2.8rem;
+        color: variables.$color-yellow;
     }
 
     &__text {
-        font-size: variables.$font-size-md;
+        font-size: 1.8rem;
         color: variables.$color-grey;
         margin-top: 6.4rem;
         letter-spacing: variables.$letter-spacing-xxs;
+        text-align: center;
+
+        @include mixins.media('md') {
+            margin-top: 5.8rem;
+            font-size: 2.3rem;
+            padding: 0 20rem;
+        }
     }
 }
