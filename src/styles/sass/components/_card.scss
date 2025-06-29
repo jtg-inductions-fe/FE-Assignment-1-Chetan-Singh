@@ -139,3 +139,77 @@
         letter-spacing: variables.$letter-spacing-sm;
     }
 }
+
+.testimonials-card {
+    text-align: center;
+
+    &__picture {
+        padding: 6.2rem 13.5rem;
+
+        @include mixins.media('md') {
+            padding: 5.4rem 13.5rem;
+        }
+
+        @include mixins.media('lg') {
+            padding: 5rem 13.5rem;
+        }
+    }
+
+    &__img {
+        width: 12.8rem;
+        height: 12.8rem;
+    }
+
+    &__details {
+        font-size: 2.8rem;
+        margin-top: 0.4rem;
+    }
+
+    &__title {
+        font-size: 2.8rem;
+        text-align: center;
+
+        &--name {
+            color: variables.$color-orange;
+        }
+
+        &--role {
+            font-size: 2.3rem;
+            color: variables.$color-grey;
+        }
+    }
+
+    &__rating {
+        @include mixins.flex(center, stretch, row, 1.8rem);
+    }
+
+    &__star {
+        font-size: 2.8rem;
+
+        &--filled {
+            color: variables.$color-yellow;
+        }
+
+        &--hollow {
+            color: variables.$color-grey-2;
+        }
+    }
+
+    &__text {
+        font-size: 1.8rem;
+        color: variables.$color-grey;
+        margin-top: 6.4rem;
+        letter-spacing: variables.$letter-spacing-xxs;
+        text-align: center;
+
+        @include mixins.media('md') {
+            margin-top: 5.8rem;
+            font-size: 2.3rem;
+            padding: 0 20rem;
+        }
+
+        @include mixins.media('lg') {
+            padding: 0 31rem;
+        }
+    }
+}
